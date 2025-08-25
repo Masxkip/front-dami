@@ -1,0 +1,275 @@
+/* Tokens and knobs */
+.service-page{
+  --hero-radius: 44px;
+  --band-pop: clamp(70px, 10vw, 120px);
+  --ink: #0f172a;
+  --muted: #475569;
+}
+
+/* Make the SectionHero rounded and above the band */
+.service-page .section-hero{
+  border-bottom-left-radius: var(--hero-radius);
+  border-bottom-right-radius: var(--hero-radius);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Black band that hugs the curve */
+.service-page .page-hero-band{
+  --band-h: clamp(90px, 12vw, 180px);
+  background:#0b0d11;
+  position: relative;
+  z-index: 0;
+  margin-top: calc(-1 * var(--hero-radius) - 90px);
+  padding-top: var(--hero-radius);
+  border-top-left-radius: var(--hero-radius);
+  border-top-right-radius: var(--hero-radius);
+  height: max(var(--band-h), var(--band-pop));
+}
+
+
+@media (max-width: 640px){
+  .service-page .page-hero-band{
+    margin-top: calc(-1 * var(--hero-radius) - 30px);
+  }
+}
+
+
+
+
+
+
+
+/* --- Intro (no pop) --- */
+.service-intro{
+  padding-block: clamp(14px, 2.4vw, 28px);
+}
+.service-intro .muted{ color: var(--muted); }
+
+/* --- Alternating service layout (image/content) --- */
+.service-alt-list{
+  display: grid;
+  gap: clamp(18px, 3vw, 28px);
+}
+.service-item{
+  display: grid;
+  gap: clamp(16px, 2.4vw, 26px);
+  align-items: center;
+}
+@media (min-width: 900px){
+  .service-item{ grid-template-columns: 1.05fr 0.95fr; }
+  .service-item.is-reverse{ grid-template-columns: 0.95fr 1.05fr; }
+  .service-item.is-reverse .service-media{ order: 2; }
+  .service-item.is-reverse .service-copy{ order: 1; }
+}
+
+/* Media with offset frame */
+.service-media{
+  position: relative;
+  max-width: 820px;
+}
+.service-img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(2,6,23,.18);
+}
+
+/* Offset frame colors */
+.service-media::after{
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 88%;
+  height: 84%;
+  border-radius: 18px;
+  z-index: -1;
+}
+.frame-black::after{ background:#0b0d11; }
+.frame-purple::after{ background:#7b61ff; } /* purple frame */
+
+@media (max-width: 900px){
+  .service-media::after{
+    right: -12px; bottom: -12px; width: 92%; height: 86%;
+  }
+}
+
+/* Copy */
+.service-copy .muted{ color: var(--muted); line-height: 1.7; }
+.service-bullets{
+  list-style: none; padding: 0; margin: 8px 0 0;
+  display: grid; gap: 6px; font-weight: 700;
+}
+
+/* CTA */
+.service-cta{
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #0b0d11;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 10px 14px;
+  transition: transform .06s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.service-cta:hover{
+  transform: translateY(-1px);
+  background: #f8fafc;
+  box-shadow: 0 10px 22px rgba(2,6,23,.10);
+}
+
+
+
+
+/* 1) Tighten the space between the intro and first service */
+.service-page .service-intro{
+  padding-bottom: clamp(4px, .8vw, 8px);
+  margin-bottom: 0;
+}
+.service-page .service-alt{ padding-top: 0; }
+.service-page .service-alt-list{ margin-top: clamp(4px, .8vw, 10px); }
+
+/* 2) Bigger service titles + 3) underline under each title */
+.service-page .service-copy .h3{
+  margin: 0 0 6px;
+  line-height: 1.2;
+  font-size: clamp(1.5rem, 1.1vw + 1.2rem, 2.125rem); /* larger title */
+  position: relative;
+}
+.service-page .service-copy .h3::after{
+  content: "";
+  display: block;
+  width: clamp(60px, 8vw, 120px);
+  height: 4px;
+  border-radius: 9999px;
+  background: #0b0d11;             /* black underline */
+  margin-top: 10px;
+}
+/* match the alternating frame color (purple) for reversed rows */
+.service-page .service-item.is-reverse .service-copy .h3::after{
+  background: #7b61ff;
+}
+
+/* 4) Increase spacing between service blocks */
+.service-page .service-alt-list{
+  gap: clamp(26px, 4.2vw, 56px);    /* more separation between items */
+}
+@media (min-width: 900px){
+  .service-page .service-item{
+    gap: clamp(18px, 2.8vw, 34px);  /* a bit more breathing room within each row */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== Service Tiers (weekly / biweekly / deep) ===== */
+.service-tiers { padding-block: clamp(0px, 0vw, 1px); }
+
+.tiers-header {
+  text-align: center;
+  margin-bottom: clamp(16px, 2.6vw, 28px);
+}
+.tiers-title { line-height: 1.25; }
+
+.tiers-grid{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(14px, 2vw, 22px);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px){
+  .tiers-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.tier-card{
+  background: #ffffff;
+  border: 2px solid #7b61ff;                 /* purple outline */
+  border-radius: 26px;
+  padding: clamp(18px, 2.2vw, 26px);
+  text-align: center;
+  color: var(--ink);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, .05); /* soft depth */
+  transition: transform .08s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.tier-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(2, 6, 23, .08);
+  border-color: #6a52ff; /* slight darken on hover */
+}
+
+.tier-title{
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: clamp(1.25rem, 0.9vw + 1.05rem, 1.75rem);
+}
+.tier-text{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: clamp(0.98rem, 0.35vw + 0.96rem, 1.08rem);
+}
+
+
+
+
+
+
+
+
+
+/* Allow ServiceIntro to look identical outside the Service page */
+.service-page .service-intro,
+.service-scope .service-intro{
+  padding-bottom: clamp(4px, .8vw, 8px);
+  margin-bottom: 0;
+}
+.service-page .service-alt,
+.service-scope .service-alt{ padding-top: 0; }
+
+.service-page .service-alt-list,
+.service-scope .service-alt-list{
+  margin-top: clamp(4px, .8vw, 10px);
+  gap: clamp(26px, 4.2vw, 56px);
+}
+
+@media (min-width: 900px){
+  .service-page .service-item,
+  .service-scope .service-item{
+    gap: clamp(18px, 2.8vw, 34px);
+  }
+}
+
+.service-page .service-copy .h3,
+.service-scope .service-copy .h3{
+  margin: 0 0 6px;
+  line-height: 1.2;
+  font-size: clamp(1.5rem, 1.1vw + 1.2rem, 2.125rem);
+  position: relative;
+}
+.service-page .service-copy .h3::after,
+.service-scope .service-copy .h3::after{
+  content: "";
+  display: block;
+  width: clamp(60px, 8vw, 120px);
+  height: 4px;
+  border-radius: 9999px;
+  background: #0b0d11;
+  margin-top: 10px;
+}
+.service-page .service-item.is-reverse .service-copy .h3::after,
+.service-scope .service-item.is-reverse .service-copy .h3::after{
+  background: #7b61ff;
+}

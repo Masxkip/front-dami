@@ -1,0 +1,195 @@
+/* ===========================
+   QUOTE LAYOUT— FULL CSS 
+   =========================== *
+/* Page-level tokens (tweak to your palette) */
+.quote-page {
+  --brand: #8b61ec;    /* primary accent */
+  --ink: #0f172a;      /* text */
+  --muted: #475569;    /* secondary text */
+  --bg: #f8fafc;       /* page background */
+}
+
+.quote-page { --hero-radius: 44px; }
+
+.quote-page { --band-pop: clamp(240px, 53vw, 260px); }   /* card pop height ctrl*/
+@media (max-width: 640px){
+  .quote-page { --band-pop: clamp(150px, 22vw, 180px); }
+} /* card pop height ctrl*/
+
+.quote-page .section-hero{ position: relative; z-index: 1; border-bottom-left-radius: 44px; border-bottom-right-radius: 44px; overflow: hidden; }
+
+.quote-page .page-hero-band{
+  --band-h: clamp(90px, 12vw, 180px);
+  height: max(var(--band-h), var(--band-pop));
+}
+
+.quote-page .pop-into-band{
+  position: relative;
+  z-index: 2;
+  margin-top: calc(-1 * var(--band-pop));
+}
+
+
+
+.quote-page .section-hero{
+  border-bottom-left-radius: var(--hero-radius);
+  border-bottom-right-radius: var(--hero-radius);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-page .page-hero-band{
+  background: #0b0d11;
+  position: relative;
+  z-index: 0;
+  margin-top: calc(-1 * var(--hero-radius) - 40px);
+  padding-top: var(--hero-radius);
+  border-top-left-radius: var(--hero-radius);
+  border-top-right-radius: var(--hero-radius);
+  height: clamp(220px, 40vw, 360px); /* black band height ctrl*/
+}
+@media (max-width: 640px){
+  .quote-page .page-hero-band{
+    height:clamp(250px, 42vw, 400px); /* tweak numbers to taste */
+  }
+}/* black band height ctrl*/
+
+
+
+.container { max-width:1200px; margin:0 auto; padding: clamp(24px, 4vw, 64px); }
+
+.h2, .h3, .h4 { color: var(--ink); margin: 0 0 .5rem 0; }
+.h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.h3 { font-size: clamp(1.25rem, 2vw, 1.4rem); }
+.h4 { font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; color: #334155; }
+
+.muted { color: var(--muted); }
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: clamp(20px, 3.5vw, 48px);
+}
+
+@media (max-width: 1024px) {
+  .quote-grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
+  padding: clamp(16px, 3vw, 28px);
+}
+
+.quote-form { margin-top: .75rem; display: grid; gap: 16px; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.field { display: grid; gap: 6px; }
+label { font-weight: 600; color: var(--ink); font-size: .96rem; }
+
+input, select, textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  color: black;
+  border-radius: 12px;
+  background: #fff;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #8b61ec;
+  box-shadow: 0 0 0 3px #8b61ec;
+}
+
+textarea { min-height: 120px; resize: vertical; }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.btn-primary {
+  background: #8b61ec;  
+  color: #fff;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+
+.help { color: var(--muted); font-size: .95rem; }
+
+.error { color: #b91c1c; font-weight: 600; }
+.success { color: #15803d; font-weight: 600; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 10px; }
+.badge { background: #f1f5f9; color: #334155; border-radius: 999px; padding: 8px 12px; font-weight: 600; }
+
+.spacer { height: 18px; }
+
+.list { margin: .2rem 0 0 0; padding-left: 1.05rem; color: var(--ink); }
+.list li { margin: .3rem 0; }
+
+
+
+/* Grid collapses to 1 column on tablets/phones */
+@media (max-width: 1024px) {
+  .quote-grid { grid-template-columns: 1fr; }
+}
+
+/* Phone-specific refinements */
+@media (max-width: 640px) {
+  .container { padding: 22px; }
+  .quote-grid { gap: 18px; }
+
+  .card {
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.06);
+  }
+
+  .form-row { grid-template-columns: 1fr; }  /* stack fields */
+  label { font-size: 1rem; }
+
+  input, select, textarea {
+    font-size: 16px;                 /* prevents iOS zoom */
+    padding: 12px 14px;
+  }
+
+  .actions {
+    flex-direction: column;          /* button on its own line */
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 14px 18px;
+  }
+
+  .help {
+    text-align: center;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .badges { gap: 8px; }
+  .badge { padding: 8px 10px; }
+}

@@ -1,0 +1,361 @@
+/* ===========================
+   ROOT & BODY LAYOUT— FULL CSS 
+   =========================== */
+:root {
+  --bg: white;           /* site background */
+  --text: #e9edf2;            /* primary text */
+  --muted: black;          /* secondary text */
+  --card: #161c24;            /* card background */
+  --border: #233040;          /* subtle borders */
+  --brand: #0c57b3;           /* navbar blue */
+  --brand-2: #69d8ff;         /* CTA pill aqua */
+  --accent: #1b8cff;          /* accent for links/hover */
+  --header-h:72px;         /* navbar height (desktop) */
+}
+
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  color: black;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* NEW: globals (add once in a base file) */
+
+@media (min-width: 992px){ :root{ --header-h:88px; } }
+html,body{ overflow-y:auto; }
+
+
+img, video, canvas, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+input, textarea { font: inherit; color: inherit; background: transparent; }
+
+/* Layout helpers */
+.container {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+}
+
+.section {
+  padding: clamp(48px, 8vw, 96px) 0;
+}
+
+/* Headings scale */
+.h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+.h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+.lead {
+  font-size: clamp(16px, 1.7vw, 20px);
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: black; 
+  color: var(--text);
+  transition: transform .06s ease, background .15s ease, border-color .15s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: #2e3d52;
+}
+.btn-primary {
+  background: #111b2a;
+  border-color: #1d2a3a;
+}
+.btn-primary:hover {
+  background: #0d1725;
+}
+
+/* Cards & grid */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+.grid {
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 768px) {
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+
+/* ===========================
+   HERO LAYOUT— FULL CSS 
+   =========================== */
+/* HERO */
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--header-h));
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden; /* ⬅ clip the curve */
+  z-index: 0;
+  
+
+  /* bottom curve like the reusable hero */
+  border-bottom-left-radius: 44px;
+  border-bottom-right-radius: 44px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+/* Dark band after hero (like your contact page screenshot) */
+.hero-band {
+  background: #0b0d11;                /* deeper than --bg */
+  height: clamp(220px, 40vw, 360px);
+  margin-top: -2px;                   /* hide any seam */
+  position: relative;
+  z-index: 0;
+}
+
+/* Background: gradient + optional image (replace path if you add one) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 70% 10%, rgba(255,255,255,0.96), transparent 60%),
+    radial-gradient(900px 500px at 20% 90%, rgba(255, 255, 255, 0.959), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.952),rgba(255, 255, 255, 0.902));
+  pointer-events: none;
+   z-index: 0; 
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../images/i1.jpg") center / cover no-repeat;
+  opacity: .18;               /* keep text readable; tweak if needed */
+  filter: saturate(1.1);
+   z-index: 0; 
+  
+}
+
+/* Hero content */
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  
+}
+.hero .h1 {
+  margin: 0 0 12px;
+  /* min 32px, fluid 8vw, max 9.5vh */
+  color: #0f172a;
+  font-size: clamp(43px, 9vw, 9.5vh);
+  
+}
+.hero .lead {
+  max-width: 820px;
+  margin: 0 auto 24px;
+  color: #0f172a;;
+}
+.cta-row {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero .lead::after {
+  content: "";
+  display: block;
+  width: clamp(80px, 16vw, 160px); /* scales a bit with screen */
+  height: 4px;
+  margin: 16px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #57037b, #8b61ec);
+  box-shadow: 0 0 18px rgba(105,216,255,.35);
+  opacity: 1;
+}
+
+
+/* --- Hero reveal animation --- */
+@keyframes hero-slide-up {
+  from { opacity: 0; transform: translateY(22px) scale(.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);   }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .hero .h1,
+  .hero .lead,
+  .cta-row {
+    opacity: 0;
+    animation: hero-slide-up .6s cubic-bezier(.2,.7,.2,1) forwards;
+    will-change: transform, opacity;
+  }
+  .hero .h1   { animation-delay: .10s; }
+  .hero .lead { animation-delay: .36s; }
+  .cta-row    { animation-delay: .64s; }
+}
+
+
+/* 1) One knob for the curve */
+:root { --hero-radius: 44px; }
+
+/* 2) Hero stays white with curved bottom and sits above the band */
+.hero{
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: var(--hero-radius);
+  border-bottom-right-radius: var(--hero-radius);
+  background: #fff;
+}
+
+/* 3) Black band hugs the curve so sides are fully black */
+.hero-band{
+  background: #0b0d11;
+  position: relative;
+  z-index: 0;
+
+  /* pull up under the hero by the full radius (+1px to kill any seam) */
+  margin-top: calc(-1 * var(--hero-radius) - 40px);
+  padding-top: var(--hero-radius);
+
+  /* match the curve so the corners are solid black */
+  border-top-left-radius: var(--hero-radius);
+  border-top-right-radius: var(--hero-radius);
+}
+
+
+
+/* ===========================
+   HOME ABOUT US — FULL CSS 
+   =========================== */
+/* About section pops upward over the black band */
+.about-pop{
+  padding-top: 0;
+  /* ↑ Move higher by making this more negative */
+  margin-top: clamp(-250px, -22vw, -160px);
+  position: relative;
+  z-index: 3; /* ensure it's above the band */
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+  .about-pop{
+    margin-top: clamp(-320px, -30vw, -220px);
+  }
+}
+
+/* Phone */
+@media (max-width: 640px){
+  .about-pop{
+    margin-top: clamp(-160px, -22vw, -100px);
+  }
+}
+
+/* White card */
+.card-light.about-single{
+  background:#fff;
+  color:#0f172a;
+  border-radius:22px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 18px 40px rgba(2,6,23,.15);
+  padding:clamp(18px,3vw,28px);
+}
+
+/* Fix typo */
+.muted-dark{ color:#0f172a; } /* or #111827 / black if you prefer */
+
+/* Mobile polishing */
+@media (max-width: 768px){
+  .card-light.about-single{ padding:18px; border-radius:18px; }
+}
+
+/* === Feature grid (kept as-is, just cleaned) === */
+.about-features{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  gap:clamp(14px,2.4vw,24px);
+  margin-top:clamp(16px,2.6vw,28px);
+  /* remove negative left offset to avoid overflow */
+  margin-left:0;
+  padding-left:0;
+  list-style:none;
+}
+@media (max-width: 900px){
+  .about-features{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+}
+
+.about-feature{
+  display:grid;
+  grid-template-rows:auto auto auto;
+  align-content:start;
+  gap:6px;
+  padding:clamp(12px,2vw,16px);
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  background:#fff;
+}
+
+/* Icon circle (single definition) */
+.about-feature .feat-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:clamp(40px,4.2vw,52px);
+  height:clamp(40px,4.2vw,52px);
+  border-radius:9999px;
+  background:#8b61ec;
+  color:#fff;
+  box-shadow:0 2px 6px rgba(2,6,23,.18);
+  margin-bottom:6px;
+}
+
+.about-feature .feat-title{ font-weight:700; }
+.about-feature .feat-sub{ color:#374151; font-size:.975rem; line-height:1.45; }
+
+/* Center the CTA; full-width on small screens */
+.cta-row{
+  display:flex;
+  justify-content:center;
+  margin-top:clamp(18px,3vw,28px);
+}
+@media (max-width: 640px){
+  .cta-row .btn{ width:100%; text-align:center; padding-block:14px; }
+}
+
+
+
+
+
+
+
+
+

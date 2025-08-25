@@ -1,0 +1,24 @@
+:root{
+  --bd-blue:#5e3ea8;
+   --bd-blue:#8b61ec;  
+  --bd-blue:#57037b;   
+  --bd-blue-dark:#0a4690; /* hover */
+  --bd-pill:#69d8ff;      /* CTA pill */
+  --bd-text:#ffffff;
+  --bd-shadow:0 6px 18px rgba(0,0,0,.12);
+
+
+
+    --grad-top:#5e3ea8;      /* light blue */
+  --grad-mid:#6d4fb3;    /* medium */
+  --grad-bot:#8b61ec;     /* deep blue */
+  --grad-bot:#0C0B43;
+  --ink:#ffffff;
+  --ink-soft: rgba(255,255,255,.9);
+  --ink-muted: rgba(255,255,255,.8);
+  --btn-bg:#79d0f2;       /* CTA button */
+  --btn-bg-hover:#8ad7f5;
+}
+
+
+

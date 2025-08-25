@@ -1,0 +1,215 @@
+/* ===========================
+   CONTACT LAYOUT— FULL CSS 
+   =========================== */
+/* Tokens */
+.contact-page {
+  --brand: #8b61ec;
+  --ink: #0f172a;
+  --muted: #475569;
+  --bg: white;
+}
+
+/* Match the hero curve and hug it with a black band */
+.contact-page { --hero-radius: 44px; }
+
+.contact-page .section-hero{
+  border-bottom-left-radius: var(--hero-radius);
+  border-bottom-right-radius: var(--hero-radius);
+  overflow: hidden;           /* ensures the curve clips the hero bg */
+  position: relative;
+  z-index: 1;                 /* sits above the band */
+}
+
+/* How far the card should overlap the black band */
+.contact-page { --band-pop: clamp(240px, 53vw, 260px); }
+@media (max-width: 640px){
+  .contact-page { --band-pop: clamp(150px, 22vw, 180px); }
+} /*
+
+/* Ensure the hero is rounded & above the band (already added earlier) */
+.contact-page .section-hero { position: relative; z-index: 1; border-bottom-left-radius: 44px; border-bottom-right-radius: 44px; overflow: hidden; }
+
+/* Make the band tall enough and hugging the curve (already present) */
+.contact-page .page-hero-band{
+  --band-h: clamp(90px, 12vw, 180px);
+  height: max(var(--band-h), var(--band-pop));   /* ✅ tall enough for the overlap */
+}
+
+/* Lift the first content section into the band */
+.contact-page .pop-into-band{
+  position: relative;
+  z-index: 2;                                      /* above the band */
+  margin-top: calc(-1 * var(--band-pop));
+}
+
+
+/* Black band that “hugs” the curve so sides are fully black */
+.contact-page .page-hero-band{
+  background: #0b0d11;
+  position: relative;
+  z-index: 0;
+
+  /* pull up under the hero by the full radius (+1px kills seam/antialias) */
+  margin-top: calc(-1 * var(--hero-radius) - 40px);
+  padding-top: var(--hero-radius);
+
+  /* match the curve so the corners render solid black */
+  border-top-left-radius: var(--hero-radius);
+  border-top-right-radius: var(--hero-radius);
+
+  /* visible height of the band */
+  height: clamp(220px, 40vw, 360px);
+}
+
+@media (max-width: 640px){
+  .contact-page .page-hero-band{
+    height:clamp(250px, 42vw, 400px); /* tweak numbers to taste */
+  }
+}/* black band height ctrl*/
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 64px);
+}
+
+.h2, .h3 { color: var(--ink); margin: 0 0 .5rem 0; }
+.h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.h3 { font-size: clamp(1.25rem, 2vw, 1.4rem); }
+.muted { color: var(--muted); }
+
+/* Grid (same spirit as quote) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;  /* ⬅️ wider message box */
+  gap: clamp(20px, 3.5vw, 48px);
+}
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
+  padding: clamp(16px, 3vw, 28px);
+}
+
+
+/* Contact details list */
+.info-list { list-style: none; margin: 6px 0 0 0; padding: 0; display: grid; gap: 18px; }
+
+.info-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: start;
+  gap: 14px;
+}
+
+.icon {
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  background: #eff6ff;
+  color: #8b61ec;
+  border: 1px solid #e5e7eb;
+}
+
+.info-label { font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+.info-value { color: var(--ink); text-decoration: none; }
+.info-value:hover { text-decoration: underline; }
+
+/* Hours block */
+.hours ul {
+  margin: 6px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+.hours li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  color: var(--ink);
+}
+
+
+/* Optional: a consistent width for the day column */
+.hours { --hours-day-width: 90px; }  /* tweak to taste */
+
+/* Keep your existing .hours ul rules */
+
+/* Make day and time sit next to each other with a small, fixed gap */
+.hours li {
+  display: grid;
+  grid-template-columns: var(--hours-day-width) max-content;
+  align-items: baseline;
+  column-gap: 10px;         /* ⬅️ tight spacing */
+  color: var(--ink);
+}
+
+/* (Optional) make the day label a bit bolder for readability */
+.hours li span:first-child { font-weight: 600; }
+
+
+/* Form (same feel as quote) */
+.contact-form { margin-top: .75rem; display: grid; gap: 16px; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.field { display: grid; gap: 6px; }
+label { font-weight: 600; color: var(--ink); font-size: .96rem; }
+
+input, textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #8b61ec;
+  box-shadow: 0 0 0 3px rgba(14,165,233,.15);
+}
+textarea { min-height: 140px; resize: vertical; }
+
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  background: black;
+  color: #fff;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary:hover{
+  background-color: #8b61ec; ;
+}
+
+.btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+
+.error { color: #b91c1c; font-weight: 600; }
+.success { color: #15803d; font-weight: 600; }
+
+/* Mobile polish */
+@media (max-width: 640px) {
+  .container { padding: 22px; }
+  .card { padding: 18px; border-radius: 16px; }
+  input, textarea { font-size: 16px; } /* avoid iOS zoom */
+  .actions { flex-direction: column; align-items: stretch; }
+  .btn-primary { width: 100%; padding: 14px 18px; }
+}
+

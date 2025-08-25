@@ -1,0 +1,164 @@
+/* ---------- Why Choose (gradient card) ---------- */
+.why {
+  padding-block: clamp(16px, 3vw, 28px);
+}
+
+/* big rounded gradient container */
+.why-card{
+  position: relative;
+  display: grid;
+  gap: clamp(16px, 3vw, 28px);
+  grid-template-columns: 1fr;
+  padding: clamp(16px, 3vw, 28px);
+  border-radius: 28px;
+  overflow: hidden;
+  /* gradient background */
+  --why-a:#0C0B43;
+  --why-b:#08082d;
+  --why-c:black;
+  background:
+    linear-gradient(135deg, var(--why-a) 10%, var(--why-b) 50%, var(--why-c) 100%);
+  color: #fff;
+  box-shadow: 0 30px 80px rgba(3, 8, 30, .20);
+}
+
+
+/* layout split */
+@media (min-width: 980px){
+  .why-card{ grid-template-columns: 0.95fr 1.05fr; }
+}
+
+/* media (left) */
+.why-media{
+  position: relative;
+  z-index: 1;
+  align-self: center;
+}
+.why-img{
+  width: 100%;
+  display:block;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(2,6,23,.28);
+}
+
+/* copy (right) */
+.why-copy{
+  z-index: 1;
+  align-self: center;
+}
+
+.why-title{
+  margin: 0 0 8px;
+  line-height: 1.1;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 1.6vw + 1.4rem, 3rem);
+}
+.why-accent{
+  color:#af8ff8; 
+}
+
+.why-intro{
+  margin: 0 0 clamp(12px, 2vw, 18px);
+  font-size: clamp(1.02rem, .5vw + 1rem, 1.22rem);
+  line-height: 1.6;
+  color: rgba(255,255,255,.92);
+}
+
+/* bullet list */
+.why-list{
+  list-style:none; padding:0; margin:0 0 clamp(16px, 3vw, 24px);
+  display:grid; gap: clamp(10px, 1.6vw, 14px);
+}
+.why-item{
+  display:flex; align-items:center; gap:10px;
+}
+.why-icon{
+  width:36px; height:36px; flex:0 0 36px;
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius: 50%;
+  background: #5e3ea8;
+  color:white;
+
+}
+.why-text{
+  font-weight:800;
+  font-size: clamp(1.02rem, .45vw + 1rem, 1.2rem);
+  letter-spacing:.01em;
+}
+
+/* CTA */
+.why-cta{
+  display:inline-flex; align-items:center; justify-content:center;
+  background: #8dd7ff; /* light cyan button (screenshot vibe) */
+  color:#062351;
+  font-weight: 800;
+  text-decoration:none;
+  border-radius: 12px;
+  padding: clamp(10px, .7vw + 10px, 16px) clamp(18px, 1.4vw + 18px, 28px);
+  box-shadow: 0 14px 32px rgba(0,0,0,.25);
+  transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+}
+.why-cta:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,.28);
+}
+
+/* keep corners full width on tiny screens */
+@media (max-width: 520px){
+  .why-card{ border-radius: 22px; }
+}
+
+
+
+
+/* ===== Why Choose: tighter + full-width ===== */
+.why-choose {                     /* the <section> */
+  padding: clamp(24px, 4vw, 48px) 0;   /* less vertical padding */
+}
+
+/* Make the gradient card span the full section width */
+.why-choose .why-card {
+  width: 100%;                     /* fill from left to right */
+  margin: 0;                       /* no extra auto-centering gap */
+  border-radius: 28px;
+  overflow: hidden;
+  padding: clamp(18px, 2.6vw, 28px); /* less internal padding = lower height */
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(2,6,23,.18);
+}
+
+/* Head + lead spacing trimmed */
+.why-choose .why-head { margin: 0 0 clamp(10px, 1.6vw, 16px); }
+.why-choose .why-lead { margin: 0 0 clamp(12px, 1.8vw, 18px); }
+
+/* Grid layout */
+.why-choose .why-grid{
+  display: grid;
+  gap: clamp(16px, 2.4vw, 24px);
+  align-items: center;
+}
+@media (min-width: 1024px){
+  .why-choose .why-grid{ grid-template-columns: 0.95fr 1.05fr; }
+}
+
+/* Image block — keeps card shorter on desktop */
+.why-choose .why-media{
+  background: #fff;
+  border-radius: 20px;
+  padding: clamp(10px, 1.4vw, 14px);
+  box-shadow: 0 12px 32px rgba(2,6,23,.28);
+}
+.why-choose .why-img{ display:block; width:100%; height:auto; }
+@media (min-width: 1024px){
+  .why-choose .why-media{ max-height: 420px; overflow: hidden; } /* reduce overall height */
+}
+
+/* Checklist */
+.why-choose .why-list{ list-style:none; margin:0; padding:0; display:grid; gap:12px; }
+.why-choose .why-item{ display:flex; align-items:center; gap:12px; font-weight:800; }
+
+
+
+/* Optional: make the card full-bleed across the viewport */
+.why-choose.bleed .container { max-width: none; width: 100%; padding-inline: 0; }
