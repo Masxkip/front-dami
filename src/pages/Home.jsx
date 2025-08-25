@@ -1,5 +1,6 @@
 // src/pages/Home.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/index.css"; // page-specific styles
 import { Sparkles, ShieldCheck, Calendar, Users } from "lucide-react";
 import FAQSection from "../components/FAQSection";
@@ -25,9 +26,9 @@ const Home = () => {
             Your trusted cleaning service for homes and offices — fast, reliable, and spotless results every time.
           </p>
           <div className="cta-row">
-            <a href="/quote" className="btn btn-primary">Book a Cleaning</a>
-            <a href="/services" className="btn-primary">View Services</a>
-          </div>
+        <Link to="/quote" className="btn btn-primary">Book a Cleaning</Link>
+        <Link to="/services" className="btn-primary">View Services</Link>
+      </div>
         </div>
       </section>
 
@@ -84,7 +85,7 @@ const Home = () => {
 </ul>
       {/* Centered CTA */}
       <div className="cta-row">
-        <a href="/about" className="btn btn-primary">Learn More About Us</a>
+        <Link to="/about" className="btn btn-primary">Learn More About Us</Link>
       </div>
     </div>
   </div>
