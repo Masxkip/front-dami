@@ -84,7 +84,7 @@ const Home = () => {
 </ul>
       {/* Centered CTA */}
       <div className="cta-row">
-        <a href="/quote" className="btn btn-primary">Learn More About Us</a>
+        <a href="/about" className="btn btn-primary">Learn More About Us</a>
       </div>
     </div>
   </div>

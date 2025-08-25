@@ -7,7 +7,7 @@ import Contact from "./pages/Contact";
 import Service from "./pages/Service";
 import About from "./pages/About";
 import Fqs from "./pages/Fqs";
-import ScrollToTop from "./components/ScrollToTop";
+
 
 function App() {
   return (
