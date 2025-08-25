@@ -5,12 +5,15 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Smooth scroll to the top of the window
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    // Scroll window
+    console.log("Scrolling to top for", pathname);
+    window.scrollTo(0, 0);
+
+    // Scroll any scrollable container
+    const container = document.querySelector(".main-content");
+    if (container) {
+      container.scrollTop = 0;
+    }
   }, [pathname]);
 
   return null;
