@@ -25,7 +25,7 @@ const Home = () => {
             Your trusted cleaning service for homes and offices — fast, reliable, and spotless results every time.
           </p>
           <div className="cta-row">
-            <a href="/contact" className="btn btn-primary">Book a Cleaning</a>
+            <a href="/quote" className="btn btn-primary">Book a Cleaning</a>
             <a href="/services" className="btn-primary">View Services</a>
           </div>
         </div>

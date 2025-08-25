@@ -1,5 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 import SiteLayout from "./layouts/SiteLayout";
 import Home from "./pages/Home";
 import Quote from "./pages/Quote";
@@ -12,8 +13,6 @@ import Fqs from "./pages/Fqs";
 function App() {
   return (
     <Router>
-      
-
       <Routes>
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
