@@ -355,6 +355,14 @@ input, textarea { font: inherit; color: inherit; background: transparent; }
 
 
 
+html, body, #root {
+  height: 100%;
+  overflow: hidden; /* prevent body scroll */
+}
+.main-content {
+  height: calc(100% - var(--header-h));
+  overflow-y: auto;
+}
 
 
 

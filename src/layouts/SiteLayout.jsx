@@ -6,8 +6,10 @@ import ScrollToTop from "../components/ScrollToTop";
 const SiteLayout = () => {
   return (
     <>
-      <Navbar />
+     <Navbar />
+    <div className="main-content">
       <Outlet />
+    </div>
     </>
   );
 };
