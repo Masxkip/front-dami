@@ -9,7 +9,7 @@ const ScrollToTop = () => {
     console.log("Scrolling to top for", pathname);
     window.scrollTo(0, 0);
 
-    // Scroll any scrollable container
+    // Scroll a
     const container = document.querySelector(".main-content");
     if (container) {
       container.scrollTop = 0;
