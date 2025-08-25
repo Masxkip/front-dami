@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import SiteLayout from "./layouts/SiteLayout";
@@ -8,11 +7,12 @@ import Contact from "./pages/Contact";
 import Service from "./pages/Service";
 import About from "./pages/About";
 import Fqs from "./pages/Fqs";
-
+import ScrollToTop from "./components/ScrollToTop"; // ✅ import it
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />  {/* ✅ this must sit inside Router */}
       <Routes>
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
