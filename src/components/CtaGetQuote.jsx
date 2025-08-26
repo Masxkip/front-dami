@@ -14,7 +14,7 @@ export default function CtaGetQuote({
       <div className="container cta-band__inner">
         <h2 id="cta-title" className="cta-title">{ctaTitle}</h2>
         <p className="cta-subtitle">{ctaSubtitle}</p>
-        <a href={ctaLink} className="cta-primary">{ctaButtonText}</a>
+        <Link to={ctaLink} className="cta-primary">{ctaButtonText}</Link>
       </div>
     </section>
   );
