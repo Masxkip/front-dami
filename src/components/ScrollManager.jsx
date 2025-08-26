@@ -1,36 +1,32 @@
 // src/components/ScrollManager.jsx
 import { useEffect, useLayoutEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigationType } from "react-router-dom";
 
-const scrollPositions = new Map();
+const positions = new Map();
 
 export default function ScrollManager() {
   const location = useLocation();
+  const navType = useNavigationType(); // 'POP' for back/forward
 
-  // Save scroll position before route changes
   useEffect(() => {
-    const handleSave = () => {
-      scrollPositions.set(location.key, window.scrollY);
-    };
-
-    window.addEventListener("beforeunload", handleSave);
-    return () => {
-      window.removeEventListener("beforeunload", handleSave);
-      handleSave();
-    };
-  }, [location]);
-
-  // Restore scroll position (or go to top for new pages)
-  useLayoutEffect(() => {
-    const savedY = scrollPositions.get(location.key);
-    if (savedY !== undefined) {
-      // back/forward navigation → restore previous scroll
-      window.scrollTo(0, savedY);
-    } else {
-      // new navigation → start at top
-      window.scrollTo(0, 0);
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
     }
+  }, []);
+
+  useEffect(() => {
+    const save = () => positions.set(location.key, window.scrollY);
+    window.addEventListener("beforeunload", save);
+    return () => {
+      window.removeEventListener("beforeunload", save);
+      save();
+    };
   }, [location]);
+
+  useLayoutEffect(() => {
+    const y = navType === "POP" ? positions.get(location.key) ?? 0 : 0;
+    window.scrollTo(0, y);
+  }, [location, navType]);
 
   return null;
 }
