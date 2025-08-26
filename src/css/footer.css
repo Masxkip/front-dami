@@ -1,0 +1,93 @@
+/* ===========================
+   FOOTER LAYOUT— FULL CSS 
+   =========================== *
+/* FOOTER WRAPPER (one gradient for CTA + footer; no gap) */
+.footer-wrap{
+  --grad-top:#5e3ea8;  --grad-mid:#6240b0; --grad-bot:#8b61ec;  
+  --ink:#ffffff; --ink-soft: rgba(255,255,255,.9); --ink-muted: rgba(255,255,255,.8);
+  --btn-bg:#0C0B43; --btn-bg-hover:rgb(33, 32, 115);
+
+
+  background:
+    linear-gradient(180deg, var(--grad-top) 0%, var(--grad-mid) 45%, var(--grad-bot) 100%),
+    radial-gradient(1200px 400px at 50% -200px, rgba(255,255,255,.07), transparent 60%);
+  color: var(--ink);
+}
+.footer-wrap .container{ max-width:1200px; margin:0 auto; padding-inline:clamp(16px,3vw,28px); }
+
+/* CTA BAND — reduced height */
+.cta-band{ 
+  padding-block: clamp(22px, 4.5vw, 56px) clamp(10px, 2.2vw, 18px);
+  text-align:center;
+}
+.cta-title{
+  font-size: clamp(1.8rem, 2.2vw + 1.6rem, 3rem);
+  font-weight: 800; line-height: 1.15; margin: 0 0 6px; color: var(--ink);
+}
+.cta-subtitle{
+  margin: 0 0 12px; color: var(--ink-soft);
+  font-size: clamp(1.02rem, .45vw + 1rem, 1.2rem);
+}
+.cta-primary{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: clamp(10px, .6vw + 10px, 14px) clamp(18px, 1.3vw + 18px, 26px);
+  border-radius: 10px; font-weight: 800; letter-spacing: .02em;
+  color:white; background: var(--btn-bg); box-shadow: 0 10px 22px rgba(0,0,0,.18);
+  text-decoration:none; transition: transform .08s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.cta-primary:hover{ background: var(--btn-bg-hover); transform: translateY(-1px); }
+.cta-primary:focus-visible{ outline:3px solid rgba(255,255,255,.6); outline-offset:3px; }
+
+/* No seam between CTA and footer */
+.cta-band + .site-footer{ margin-top: 0; }
+
+/* FOOTER — tighter vertical padding */
+.site-footer{ padding-block: clamp(16px, 3vw, 36px) clamp(16px, 3vw, 36px); }
+
+/* NEW: Service areas line (centered) */
+.service-areas{
+  text-align:center;
+  margin: 0 auto clamp(14px, 2.6vw, 22px);
+  max-width: 980px;
+  color: var(--ink-soft);
+  font-size: clamp(1rem, .45vw + 1rem, 1.2rem);
+}
+
+/* Contact grid */
+.footer-grid{
+  display:grid; grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: clamp(18px, 3vw, 36px); align-items:start;
+}
+.footer-item{ display:flex; gap:14px; align-items:flex-start; }
+.fi-icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:42px; height:42px; border-radius:50%;
+  background: rgba(255,255,255,.18); color:#fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+}
+.fi-body{ line-height:1.55; }
+.fi-title{ font-weight:800; margin-bottom:4px; color:var(--ink); }
+.fi-link{ color:var(--ink-soft); text-decoration:none; }
+.fi-link:hover{ text-decoration:underline; }
+.fi-address{ font-style:normal; color:var(--ink-muted); }
+
+/* Bottom row — reduced spacing */
+.footer-bottom{
+  display:flex; justify-content:space-between; gap:16px; align-items:center;
+  margin-top: clamp(8px, 1.4vw, 14px);
+  padding-top: clamp(8px, 1.6vw, 12px);
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.footer-bottom .copy{ color: var(--ink-muted); }
+.footer-bottom .privacy{ color:#fff; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .footer-grid{ grid-template-columns:1fr; }
+  .cta-band{ padding-block: clamp(18px, 6vw, 34px) 10px; }
+  .site-footer{ padding-block: 12px clamp(18px, 7vw, 36px); }
+  .service-areas{ margin-bottom: clamp(12px, 4vw, 18px); }
+  .footer-bottom{
+    flex-direction: column; align-items:flex-start; gap:6px;
+    margin-top: 10px; padding-top: 10px;
+  }
+}

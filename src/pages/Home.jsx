@@ -1,0 +1,91 @@
+// src/pages/Home.jsx
+import React from "react";
+import { Link } from "react-router-dom";
+import "../css/index.css"; // page-specific styles
+import { Sparkles, ShieldCheck, Calendar, Users } from "lucide-react";
+
+
+
+const Home = () => {
+  return (
+    <main>
+      {/* HERO (now with curved bottom) */}
+      <section className="hero">
+        <div className="hero-bg" />
+        <div className="hero-inner container">
+          <h1 className="h1">Your Trusted Partner for Spotless Cleaning Experience!</h1>
+          <p className="lead">
+            Your trusted cleaning service for homes and offices — fast, reliable, and spotless results every time.
+          </p>
+          <div className="cta-row">
+        <Link to="/quote" className="btn btn-primary">Book a Cleaning</Link>
+        <Link to="/services" className="btn-primary">View Services</Link>
+      </div>
+        </div>
+      </section>
+
+      {/* DARK BAND that the next section overlaps */}
+      <div className="hero-band" aria-hidden="true" />
+
+    {/* ABOUT US — single long card popping onto the black band */}
+<section className="about section about-pop">
+  <div className="container">
+    <div className="card-light about-single">
+      <h2 className="h2">We Are A Cleaning Service That puts People First</h2>
+
+      <p className="muted-dark">
+        We’re a <strong>licensed, family-owned</strong> cleaning company providing professional, reliable care for residential, post-construction, and office spaces. Our mission is to deliver every job to the highest standards so you come home to a <strong>clean, healthy space</strong> you can be proud of. We serve <strong>Woodstock, Ingersoll, Tillsonburg, London, Kitchener, Waterloo,</strong> and other surrounding areas. From studio apartments to busy offices and new builds, we tailor each clean to your space, schedule, and preferences. Our approach prioritizes healthier, safer environments for both homeowners and cleaners. Before you invite us in, it’s important to understand our values: integrity, professionalism, and clear communication. You can count on us to listen, show up on time, and provide the best house cleaning service for your needs, every visit.
+      </p>
+
+      <p className="muted-dark">
+        We ensure your <strong>privacy and safety</strong>. We respect your home and your information. Our team follows safety-first practices and thoughtful cleaning protocols to ensure your space is cared for with precision, covering dusting and vacuuming, scrubbing floors, and sanitizing high-touch surfaces. Every home is different, so we offer <strong>custom plans</strong> and helpful add-ons like bed linen changes, dishwasher loading/unloading, and laundry folding. Prefer eco-conscious options? We can accommodate upon request. Count on dependable quality, <strong>flexible scheduling</strong>, and <strong>upfront pricing.</strong> If you’re ready for a partner that treats your home like their own, we are one quote away.
+      </p>
+
+      {/* NEW: 4-feature list */}
+<ul className="about-features" role="list">
+  <li className="about-feature">
+    <div className="feat-icon" aria-hidden>
+      <Sparkles size={22} strokeWidth={2.25} />
+    </div>
+    <div className="feat-title">Quality Cleaning</div>
+    <div className="feat-sub">Detailed cleaning guided by a comprehensive checklist.</div>
+  </li>
+
+  <li className="about-feature">
+    <div className="feat-icon" aria-hidden>
+      <ShieldCheck size={22} strokeWidth={2.25} />
+    </div>
+    <div className="feat-title">Licensed &amp; Insured</div>
+    <div className="feat-sub">Background-checked and fully insured professionals.</div>
+  </li>
+
+  <li className="about-feature">
+    <div className="feat-icon" aria-hidden>
+      <Calendar size={22} strokeWidth={2.25} />
+    </div>
+    <div className="feat-title">Flexible Scheduling</div>
+    <div className="feat-sub">Tailored plans that work around your schedule.</div>
+  </li>
+
+  <li className="about-feature">
+    <div className="feat-icon" aria-hidden>
+      <Users size={22} strokeWidth={2.25} />
+    </div>
+    <div className="feat-title">People-Centric</div>
+    <div className="feat-sub">Cleaner empowerment, charity-driven, client-focused.</div>
+  </li>
+</ul>
+      {/* Centered CTA */}
+      <div className="cta-row">
+        <Link to="/about" className="btn btn-primary">Learn More About Us</Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+  );
+};
+
+export default Home;
