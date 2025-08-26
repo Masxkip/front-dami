@@ -9,7 +9,7 @@ export default function WhyChoose({
       Why Choose <span className="why-accent">H&C Cleaning?</span>
     </>
   ),
-  intro = `At Blue Diamond Window Cleaning, we take pride in delivering unparalleled service with
+  intro = `At Heart & Care Cleaning, we take pride in delivering unparalleled service with
   precision, professionalism, and a commitment to excellence. Whether it’s your home or
   business, we ensure every window shines with diamond brilliance.`,
   bullets = [
