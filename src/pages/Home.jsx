@@ -27,7 +27,7 @@ const Home = () => {
           </p>
           <div className="cta-row">
         <Link to="/quote" className="btn btn-primary">Book a Cleaning</Link>
-        <Link to="/service" className="btn btn-primary">View Services</Link>
+        <Link to="/services" className="btn btn-primary">View Services</Link>
       </div>
         </div>
       </section>

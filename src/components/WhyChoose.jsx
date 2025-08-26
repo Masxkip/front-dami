@@ -20,7 +20,6 @@ export default function WhyChoose({
     "Locally Owned and Operated",
   ],
   ctaText = "GET A QUOTE",
-  ctaHref = "/quote",
   imgSrc = "../assets/jjk1.png",         
   imgAlt = "Blue Diamond service"
 }) {
@@ -53,7 +52,7 @@ export default function WhyChoose({
             </ul>
 
               <br />
-            <a className="why-cta" href={ctaHref}>{ctaText} →</a>
+            <a className="why-cta" href="../pages/Quote.jsx">{ctaText}</a>
           </div>
         </div>
       </div>
