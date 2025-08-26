@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SectionHero from "../components/SectionHero";
 import "../css/service.css";
 import heroBg from "../assets/i1.jpg";
@@ -61,7 +62,7 @@ export default function Service() {
                 <li>Clear, upfront pricing</li>
               </ul>
               <br />
-              <a className="btn-primary" href="/quote">Get a quote →</a>
+              <Link to="/quote" className="btn-primary">Get a quote →</Link>
             </div>
           </article>
 
@@ -82,7 +83,7 @@ export default function Service() {
                 <li>Final turnover ready</li>
               </ul>
                <br />
-              <a className="btn-primary" href="/quote">Get a quote →</a>
+              <Link to="/quote" className="btn-primary">Get a quote →</Link>
             </div>
           </article>
 
@@ -103,7 +104,7 @@ export default function Service() {
                 <li>Sanitizing high-touch areas</li>
               </ul>
                <br />
-              <a className="btn-primary" href="/quote">Get a quote →</a>
+              <Link to="/quote" className="btn-primary">Get a quote →</Link>
             </div>
           </article>
 
@@ -124,7 +125,7 @@ export default function Service() {
                 <li>Staging-ready finish</li>
               </ul>
                <br />
-              <a className="btn-primary" href="/quote">Get a quote →</a>
+              <Link to="/quote" className="btn-primary">Get a quote →</Link>
             </div>
           </article>
 
