@@ -1,5 +1,6 @@
 // components/CtaGetQuote.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/footer.css"; // reuses .cta-band styles you already have
 
 export default function CtaGetQuote({

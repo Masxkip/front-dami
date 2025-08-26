@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/cta-duo.css";
+
 
 /**
  * Reusable two-button CTA row.
@@ -28,6 +30,7 @@ export default function CTADuo({
       className={`ctad-cta-duo section ${tightTop ? "ctad--tight-top" : ""} ${tightBottom ? "ctad--tight-bottom" : ""} ${className}`}
       style={{ "--cta-accent": accent, "--cta-ink": ink }}
     >
+      <br />
       <div className={`container ${containerClassName}`}>
         <div className="ctad-row">
           <a href={primaryHref} className="ctad-btn ctad-btn-solid">
@@ -35,10 +38,12 @@ export default function CTADuo({
           </a>
 
           <a href={secondaryHref} className="ctad-btn ctad-btn-outline">
+  
             {secondaryLabel}
           </a>
         </div>
       </div>
+      <br />
     </section>
   );
 }

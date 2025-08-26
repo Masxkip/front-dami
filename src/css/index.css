@@ -160,7 +160,7 @@ input, textarea { font: inherit; color: inherit; background: transparent; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("../images/i1.jpg") center / cover no-repeat;
+  background: url("../assets/i1.jpg") center / cover no-repeat;
   opacity: .18;               /* keep text readable; tweak if needed */
   filter: saturate(1.1);
    z-index: 0; 

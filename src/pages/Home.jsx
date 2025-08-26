@@ -3,6 +3,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/index.css"; // page-specific styles
 import { Sparkles, ShieldCheck, Calendar, Users } from "lucide-react";
+import FAQSection from "../components/FAQSection";
+import SiteFooter from "../components/SiteFooter";
+import ServiceIntro from "../components/ServiceIntro";
+import heroBg from "../assets/i1.jpg";
+import truckImg from "../assets/i2.jpg";
+import WhyChoose from "../components/WhyChoose";
+import CtaGetQuote from "../components/CtaGetQuote";
+import CTADuo from "../components/CTADuo";
 
 
 
@@ -19,7 +27,7 @@ const Home = () => {
           </p>
           <div className="cta-row">
         <Link to="/quote" className="btn btn-primary">Book a Cleaning</Link>
-        <Link to="/services" className="btn-primary">View Services</Link>
+        <Link to="/service" className="btn-primary">View Services</Link>
       </div>
         </div>
       </section>
@@ -84,6 +92,36 @@ const Home = () => {
 </section>
 
 
+
+<section className="why-choose section bleed">
+ <WhyChoose imgSrc={truckImg} imgAlt="Blue Diamond truck" />
+   </section>
+
+
+
+
+
+        {/* ...your hero, etc... */}
+      <ServiceIntro imgSrc={heroBg} />
+      {/* ...more sections... */}
+
+
+
+
+        <FAQSection
+        items={[
+          { q: "What areas do you service?", a: "London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo." },
+          { q: "Are you insured?", a: "Yes—fully licensed and insured for residential, office, and post-construction." },
+          { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
+        ]}
+        ctaHref="/faqs"
+        ctaLabel="VIEW ALL FAQS"
+        hugNext
+      />
+                  <div className="footer-wrap">
+                    <CtaGetQuote/>
+                    <SiteFooter />
+                  </div>
     </main>
   );
 };

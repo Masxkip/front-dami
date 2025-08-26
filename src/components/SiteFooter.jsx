@@ -1,7 +1,9 @@
 // components/SiteFooter.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import "../css/footer.css";
+
 
 export default function SiteFooter({
   // NEW: footer-only props
@@ -20,10 +22,11 @@ export default function SiteFooter({
   return (
     <footer className="site-footer" role="contentinfo" aria-label="Footer">
       {/* service areas line */}
+    
       <div className="container">
         <div className="service-areas">{serviceAreasText}</div>
       </div>
-
+            <br />
       <div className="container footer-grid">
         <div className="footer-item">
           <div className="fi-icon"><Phone size={22} strokeWidth={2.25} /></div>
@@ -51,7 +54,7 @@ export default function SiteFooter({
           </div>
         </div>
       </div>
-
+        <br />
       <div className="container footer-bottom">
         <div className="copy">{copyright}</div>
         <a className="privacy" href={privacyHref}>Privacy Policy</a>

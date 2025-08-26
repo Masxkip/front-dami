@@ -1,11 +1,12 @@
 // components/FAQSection.jsx
 import React, { useState, useId, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import "../css/hfqs.css";
 
 export default function FAQSection({
   title = "Frequently Asked Questions",
-  ctaHref = "/faqs",
+  ctaHref = "/fqs",
   ctaLabel = "VIEW ALL FAQS",
   items = [
     {
@@ -40,9 +41,9 @@ export default function FAQSection({
           <h2 className="faq-title">{title}</h2>
 
           {ctaHref && (
-            <a className="faq-cta" href={ctaHref}>
-              {ctaLabel} <ArrowRight size={18} strokeWidth={2.4} />
-            </a>
+            
+         <Link to="/faq" className="faq-cta">VIEW ALL FAQS<ArrowRight size={18} strokeWidth={2.4} /></Link>
+            
           )}
         </div>
 

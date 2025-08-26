@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import "../css/navbar.css";
 
+
 const DESKTOP_Q = "(min-width: 992px)";
 
 export default function Navbar() {
@@ -42,7 +43,7 @@ export default function Navbar() {
           {/* Brand — add your image or text here */}
                     {/* Brand */}
           <Link to="/" className="bd-brand" aria-label="Blue Diamond Home">
-            <img src="/images/i1.jpg" alt="Heart & Care Logo" className="bd-diamond" />
+            <img src="../assets/i2.jpg" alt="Heart & Care Logo" className="bd-diamond" />
           </Link>
 
           {/* Desktop nav */}
