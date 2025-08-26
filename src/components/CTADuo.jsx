@@ -9,7 +9,6 @@ import "../css/cta-duo.css";
  */
 export default function CTADuo({
   // Button texts + links
-  primaryHref = "/services",
   primaryLabel = "Learn more about our Cleaning Services",
   secondaryHref = "tel:+18884776243",
   secondaryLabel = "Call us at 1-888-477-MAID",
@@ -33,7 +32,7 @@ export default function CTADuo({
       <br />
       <div className={`container ${containerClassName}`}>
         <div className="ctad-row">
-          <a href={primaryHref} className="ctad-btn ctad-btn-solid">
+          <a href="../pages/Service.jsx" className="ctad-btn ctad-btn-solid">
             {primaryLabel}
           </a>
 
