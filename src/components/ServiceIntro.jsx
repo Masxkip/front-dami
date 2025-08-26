@@ -3,9 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/service.css";
 import CTADuo from "../components/CTADuo";
+import heroBg1 from "../assets/m2.png";
+import heroBg2 from "../assets/m3.png";
+import heroBg3 from "../assets/m4.png";
+import heroBg4 from "../assets/m1.png";
 
 export default function ServiceIntro({
-  imgSrc,
+
   quoteHref = "/quote",
   introTitle = "Premium Cleaning, Local Care",
   introBody = (
@@ -42,7 +46,7 @@ export default function ServiceIntro({
         <div className="container service-alt-list">
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={imgSrc} alt="Residential cleaning" className="service-img" />
+              <img src={heroBg1} alt="Residential cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Residential Cleaning</h3>
@@ -63,7 +67,7 @@ export default function ServiceIntro({
 
           <article className="service-item is-reverse">
             <div className="service-media frame-purple">
-              <img src={imgSrc} alt="Post-construction cleaning" className="service-img" />
+              <img src={heroBg2} alt="Post-construction cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Post-Construction Cleaning</h3>
@@ -83,7 +87,7 @@ export default function ServiceIntro({
 
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={imgSrc} alt="Office and commercial cleaning" className="service-img" />
+              <img src={heroBg3} alt="Office and commercial cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Office &amp; Commercial</h3>
@@ -97,7 +101,7 @@ export default function ServiceIntro({
                 <li>Sanitizing high-touch areas</li>
               </ul>
               <br />
-              <Link to="/quote" className="btn-primary">Get a quote →</Link>
+              <a className="btn-primary" href={quoteHref}>Get a quote →</a>
             </div>
           </article>
         </div>

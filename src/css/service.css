@@ -88,8 +88,8 @@
   border-radius: 18px;
   z-index: -1;
 }
-.frame-black::after{ background:#0b0d11; }
-.frame-purple::after{ background:#7b61ff; } /* purple frame */
+.frame-black::after{ background:#0C0B43; }
+.frame-purple::after{ background:#0C0B43; } /* purple frame */
 
 @media (max-width: 900px){
   .service-media::after{

@@ -7,7 +7,7 @@ import FAQSection from "../components/FAQSection";
 import SiteFooter from "../components/SiteFooter";
 import ServiceIntro from "../components/ServiceIntro";
 import heroBg from "../assets/i1.jpg";
-import truckImg from "../assets/i2.jpg";
+import truckImg from "../assets/jjk1.png";
 import WhyChoose from "../components/WhyChoose";
 import CtaGetQuote from "../components/CtaGetQuote";
 import CTADuo from "../components/CTADuo";

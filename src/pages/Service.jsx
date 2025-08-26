@@ -2,6 +2,10 @@ import React from "react";
 import SectionHero from "../components/SectionHero";
 import "../css/service.css";
 import heroBg from "../assets/i1.jpg";
+import heroBg1 from "../assets/m2.png";
+import heroBg2 from "../assets/m3.png";
+import heroBg3 from "../assets/m4.png";
+import heroBg4 from "../assets/m1.png";
 import FAQSection from "../components/FAQSection";
 import CtaGetQuote from "../components/CtaGetQuote";
 import SiteFooter from "../components/SiteFooter";
@@ -42,7 +46,7 @@ export default function Service() {
           {/* 1 — Residential (image LEFT, black frame) */}
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={heroBg} alt="Residential cleaning" className="service-img" />
+              <img src={heroBg1} alt="Residential cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Residential Cleaning</h3>
@@ -64,7 +68,7 @@ export default function Service() {
           {/* 2 — Post-Construction (image RIGHT, purple frame) */}
           <article className="service-item is-reverse">
             <div className="service-media frame-purple">
-              <img src={heroBg} alt="Post-construction cleaning" className="service-img" />
+              <img src={heroBg2} alt="Post-construction cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Post-Construction Cleaning</h3>
@@ -85,7 +89,7 @@ export default function Service() {
           {/* 3 — Office (image LEFT, black frame) */}
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={heroBg} alt="Office and commercial cleaning" className="service-img" />
+              <img src={heroBg3} alt="Office and commercial cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Office &amp; Commercial</h3>
@@ -106,7 +110,7 @@ export default function Service() {
           {/* 4 — Move-In / Move-Out (image RIGHT, purple frame) */}
           <article className="service-item is-reverse">
             <div className="service-media frame-purple">
-              <img src={heroBg} alt="Move-in move-out cleaning" className="service-img" />
+              <img src={heroBg4} alt="Move-in move-out cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Move-In / Move-Out</h3>

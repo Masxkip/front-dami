@@ -21,7 +21,7 @@ export default function WhyChoose({
   ],
   ctaText = "GET A QUOTE",
   ctaHref = "/quote",
-  imgSrc = "../assets/i1.jpg",         
+  imgSrc = "../assets/jjk1.png",         
   imgAlt = "Blue Diamond service"
 }) {
   return (
