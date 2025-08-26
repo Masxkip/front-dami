@@ -32,9 +32,8 @@ export default function CTADuo({
       <br />
       <div className={`container ${containerClassName}`}>
         <div className="ctad-row">
-          <a href="../pages/Service.jsx" className="ctad-btn ctad-btn-solid">
-            {primaryLabel}
-          </a>
+          <Link to="/services" className="ctad-btn ctad-btn-solid">{primaryLabel}</Link>
+
 
           <a href={secondaryHref} className="ctad-btn ctad-btn-outline">
   

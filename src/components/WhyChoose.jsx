@@ -52,7 +52,7 @@ export default function WhyChoose({
             </ul>
 
               <br />
-            <a className="why-cta" href="../pages/Quote.jsx">{ctaText}</a>
+            <Link to="/quote" className="why-cta">Get a quote →</Link>
           </div>
         </div>
       </div>
