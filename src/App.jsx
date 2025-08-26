@@ -7,13 +7,13 @@ import Contact from "./pages/Contact";
 import Service from "./pages/Service";
 import About from "./pages/About";
 import Fqs from "./pages/Fqs";
-import ScrollToTop from "./components/ScrollToTop"; // ✅ import
+import ScrollManager from "./components/ScrollManager"; // ✅
 
 
 function App() {
   return (
     <Router>
-      <ScrollToTop />   {/* ✅ always on */}
+      <ScrollManager />
       <Routes>
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
