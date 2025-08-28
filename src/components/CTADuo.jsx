@@ -11,7 +11,7 @@ export default function CTADuo({
   // Button texts + links
   primaryLabel = "Learn more about our Cleaning Services",
   secondaryHref = "tel:+18884776243",
-  secondaryLabel = "Call us at 1-888-477-MAID",
+  secondaryLabel = "Call us at 1-888-477-999",
 
   // Theming knobs (match your About page defaults)
   accent = "#8b61ec",     // purple accent
@@ -29,7 +29,7 @@ export default function CTADuo({
       className={`ctad-cta-duo section ${tightTop ? "ctad--tight-top" : ""} ${tightBottom ? "ctad--tight-bottom" : ""} ${className}`}
       style={{ "--cta-accent": accent, "--cta-ink": ink }}
     >
-      <br />
+    
       <div className={`container ${containerClassName}`}>
         <div className="ctad-row">
           <Link to="/services" className="ctad-btn ctad-btn-solid">{primaryLabel}</Link>

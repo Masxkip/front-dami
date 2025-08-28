@@ -111,8 +111,6 @@
 }
 
 
-
-
 /* ===== Why Choose: tighter + full-width ===== */
 .why-choose {                     /* the <section> */
   padding: clamp(24px, 4vw, 48px) 0;   /* less vertical padding */
@@ -163,3 +161,18 @@
 
 /* Optional: make the card full-bleed across the viewport */
 .why-choose.bleed .container { max-width: none; width: 100%; padding-inline: 0; }
+
+
+
+
+/* the wrapper before WhyChoose */
+.why-choose.section{
+  /* reduce top padding so it sits closer to About */
+  padding-top: clamp(8px, 1.6vw, 14px);
+}
+
+/* remove the inner padding on WhyChoose's own <section class="why section"> 
+   to prevent "double padding" */
+.why-choose .why.section{
+  padding: 0;
+}

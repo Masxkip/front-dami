@@ -91,3 +91,59 @@
     margin-top: 10px; padding-top: 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+/* CTA BAND — add more space below the button (area 1) */
+.cta-band{
+  /* top padding  stays similar; bottom padding increased */
+  padding-block: clamp(22px, 4.5vw, 56px) clamp(12px, 1vw, 16px);
+  text-align:center;
+}
+
+/* Service areas line — add top AND bottom margin (area 2) */
+.service-areas{
+  text-align:center;
+  /* was: margin: 0 auto clamp(14px, 2.6vw, 22px); */
+  margin: clamp(12px, 2vw, 20px) auto clamp(35px, 4.9vw, 58px);
+  max-width: 980px;
+  color: var(--ink-soft);
+  font-size: clamp(1rem, .45vw + 1rem, 1.2rem);
+}
+
+/* Contact grid — give a little space before the bottom bar (area 3) */
+.footer-grid{
+  /* NEW */
+  margin-bottom: clamp(16px, 2.6vw, 28px);
+}
+
+/* Bottom row — push it down slightly and increase its top padding (area 3) */
+.footer-bottom{
+  /* was: margin-top: clamp(8px, 1.4vw, 14px); padding-top: clamp(8px, 1.6vw, 12px); */
+  margin-top: clamp(18px, 3vw, 32px);
+  padding-top: clamp(12px, 2vw, 18px);
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+/* Mobile tweaks to keep proportions */
+@media (max-width: 900px){
+  .cta-band{ 
+    /* add a bit more space under the button on mobile too */
+    padding-block: clamp(18px, 6vw, 34px) clamp(1px, 0vw, 1px);
+  }
+  .service-areas{
+    /* balanced space above/below on mobile */
+    margin: clamp(14px, 5vw, 18px) auto clamp(18px, 6vw, 26px);
+  }
+  .footer-bottom{
+    margin-top: clamp(14px, 5vw, 24px);
+    padding-top: clamp(1px, 0vw, 1px);
+  }
+}

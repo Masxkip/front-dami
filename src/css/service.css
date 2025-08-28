@@ -273,3 +273,19 @@
 .service-scope .service-item.is-reverse .service-copy .h3::after{
   background: #7b61ff;
 }
+
+
+
+
+
+/* ===== Service Tiers (weekly / biweekly / deep) ===== */
+/* keep top tight, add generous space at the bottom */
+.service-tiers{
+  padding-top: clamp(4px, .6vw, 8px);
+  padding-bottom: clamp(32px, 4.5vw, 62px);
+}
+
+@media (max-width: 640px){
+  /* a little extra breathing room on phones */
+  .service-tiers{ padding-bottom: clamp(40px, 7vw, 70px); }
+}

@@ -355,3 +355,18 @@ input, textarea { font: inherit; color: inherit; background: transparent; }
   .cta-row .btn{ width:100%; text-align:center; padding-block:14px; }
 }
 
+
+
+/* 1) Tighten the gap: About ↔ Why Choose */
+.about.section{
+  /* reduce only the bottom padding of About */
+  padding-bottom: clamp(16px, 4.8vw, 49px);
+}
+
+/* 2) Make the About card wider ONLY on mobile */
+@media (max-width: 640px){
+  /* widen the container just for the About section */
+  .about .container{
+    width: min(1200px, 96vw);  /* was 92vw globally */
+  }
+}

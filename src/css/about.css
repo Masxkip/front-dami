@@ -106,7 +106,7 @@
   bottom:-18px;
   width:88%;
   height:84%;
-  background:#0b0d11;
+  background:#0C0B43;
   border-radius:18px;
   z-index:-1;
 }
@@ -157,7 +157,7 @@
   width:clamp(100px, 12vw, 180px);
   height:4px;
   border-radius:999px;
-  background:#0b0d11;
+  background:black;
   margin:clamp(16px, 3vw, 28px) auto 0;
 }
 
@@ -222,7 +222,7 @@
   bottom:-18px;
   width:88%;
   height:84%;
-  background:#0b0d11;
+  background:#0C0B43;
   border-radius:18px;
   z-index:-1;
 }
@@ -369,3 +369,51 @@
   .about-page .cta-duo-row{ grid-template-columns:1fr; }
   .about-page .cta{ max-width:none; width:100%; }
 }
+
+
+
+
+
+
+
+/* --- CORE MISSION: end spacing tighter --- */
+.about-page .mission{
+  /* was: padding-block-end: clamp(24px, 5vw, 56px); */
+  padding-block-start: clamp(12px, 2vw, 20px);
+  padding-block-end: clamp(18px, 5vw, 68px);
+  margin-top: 0;
+}
+/* the little black line under the mission list */
+.about-page .mission-list::after{
+  /* was: margin: clamp(16px, 3vw, 28px) auto 0; */
+  margin: clamp(8px, 1.4vw, 12px) auto 0;
+}
+
+/* --- OUR VALUES: closer to the line above, but more space below --- */
+.about-page .values{
+  /* was: padding-block: clamp(28px, 5vw, 72px) clamp(6px, 1vw, 10px); */
+  padding-top: clamp(8px, 1.2vw, 14px);       /* closer to the mission line */
+  padding-bottom: clamp(28px, 5vw, 56px);     /* MORE room above the phone CTA */
+}
+
+
+
+/* ===== MOBILE: tighten space between Mission line and Values ===== */
+@media (max-width: 640px){
+  /* 1) Last paragraph above the line: smaller bottom margin */
+  .about-page .mission-item:last-child .mission-copy p:last-child{
+    margin-bottom: -20px;   /* was browser default (~16px) */
+  }
+
+  /* 2) The black line itself: move it up closer */
+  .about-page .mission-list::after{
+    margin: 4px auto 0;   /* was ~8–12px */
+  }
+
+  /* 3) Values section: sit closer to the line */
+  .about-page .values{
+    padding-top: 2px;     /* was ~8–14px */
+  }
+}
+
+

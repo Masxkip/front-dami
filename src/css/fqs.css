@@ -196,3 +196,48 @@
 }
 
 
+
+
+
+
+
+/* 1) Space between hero band and the pills */
+.fqs-page .fqs-controls{
+  /* more room above, a little below */
+  padding-top: clamp(18px, 3vw, 36px);
+  padding-bottom: clamp(6px, 1.2vw, 12px);
+}
+@media (max-width: 640px){
+  .fqs-page .fqs-controls{ padding-top: clamp(16px, 5vw, 19px); }
+}
+.fqs-page .fqs-pills.center{
+  /* small gap beneath the pills so the first title isn’t glued to them */
+  margin-bottom: clamp(8px, 2vw, 14px);
+}
+
+/* 2) Smaller group headers (desktop + mobile) */
+.fqs-page .fqs-group-title{
+  font-size: clamp(1.25rem, 0.9vw + 1.3rem, 2.1rem); /* was very large */
+  line-height: 1.15;
+}
+
+/* 3) More space before the phone CTA */
+.fqs-page .fqs-groups{
+  padding-top: clamp(8px, 1.6vw, 14px);      /* keep list close to pills */
+  padding-bottom: clamp(28px, 2vw, 32px);    /* room before CTA row */
+}
+
+/* if you prefer to push from the list itself (optional, extra cushion) */
+.fqs-page .fqs-group:last-child .fqs-list{
+  margin-bottom: clamp(16px, 3vw, 22px);
+}
+
+
+
+@media (max-width: 640px){
+  .fqs-page .fqs-groups{
+  padding-top: clamp(8px, 0vw, 1px);      /* keep list close to pills */
+  padding-bottom: clamp(-12px, -29vw, -55px);    /* room before CTA row */
+}
+}
+

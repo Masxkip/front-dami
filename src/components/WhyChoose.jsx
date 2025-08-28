@@ -50,9 +50,9 @@ export default function WhyChoose({
                 </li>
               ))}
             </ul>
+            <br />
 
-              <br />
-            <Link to="/quote" className="why-cta">Get a quote →</Link>
+            <Link to="/quote" className="btn-primary1">Get a quote →</Link>
           </div>
         </div>
       </div>

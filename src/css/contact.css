@@ -190,6 +190,22 @@ textarea { min-height: 140px; resize: vertical; }
   background-color: #8b61ec; ;
 }
 
+
+.btn-primary1 {
+  background: whitesmoke;
+  color: black;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary1:hover{
+  background-color: #8b61ec;
+  color: white;
+}
+
 .btn-primary:disabled { opacity: .6; cursor: not-allowed; }
 
 .error { color: #b91c1c; font-weight: 600; }

@@ -248,6 +248,11 @@ export default function Quote() {
             </div>
 
             <div className="spacer" />
+                
+            <h4 className="h4">Service Hours</h4>
+            <p className="muted">MON-FRI: <span>8:00 AM – 6:00 PM</span></p>
+            <p className="muted">MON-FRI: <span>8:00 AM – 6:00 PM</span></p>
+
 
             <h4 className="h4">Response time</h4>
             <p className="muted">We usually reply within a few business hours.</p>

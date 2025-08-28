@@ -135,7 +135,7 @@ export default function ServiceIntro({
             </li>
           </ul>
         </div>
-        <br /><br />
+     
       </section>
     </div>
   );

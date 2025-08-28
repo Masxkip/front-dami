@@ -15,7 +15,7 @@ export default function SiteFooter({
   email = "info@bdwc.ca",
   emailHref = "mailto:info@bdwc.ca",
   locationLabel = "Location",
-  addressLines = ["3 Langarth Street West", "London, ON N6J 1N5"],
+  addressLines = ["Woodstock, ON"],
   copyright = "Copyright © 2025 | All Rights Reserved.",
   privacyHref = "/privacy-policy",
 }) {
@@ -26,7 +26,7 @@ export default function SiteFooter({
       <div className="container">
         <div className="service-areas">{serviceAreasText}</div>
       </div>
-            <br />
+      
       <div className="container footer-grid">
         <div className="footer-item">
           <div className="fi-icon"><Phone size={22} strokeWidth={2.25} /></div>
@@ -54,7 +54,8 @@ export default function SiteFooter({
           </div>
         </div>
       </div>
-        <br />
+      <br />
+
       <div className="container footer-bottom">
         <div className="copy">{copyright}</div>
         <a className="privacy" href={privacyHref}>Privacy Policy</a>

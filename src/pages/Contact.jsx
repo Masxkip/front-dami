@@ -96,7 +96,7 @@ export default function Contact() {
                 <div>
                   <div className="info-label">Location</div>
                   <address className="info-value not-italic">
-                    3 Langarth W<br />London, ON N6J 1N5
+                    Woodstock, ON<br />
                   </address>
                 </div>
               </li>
