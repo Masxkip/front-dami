@@ -7,7 +7,7 @@ import FAQSection from "../components/FAQSection";
 import SiteFooter from "../components/SiteFooter";
 
 
-const API_URL = import.meta.env.VITE_BACKEND_URL; // optional backend
+const API_URL = import.meta.env.VITE_BACKEND_URL; 
 
 export default function Quote() {
   const [loading, setLoading] = useState(false);
