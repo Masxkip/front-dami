@@ -11,6 +11,7 @@ import truckImg from "../assets/jjk1.png";
 import WhyChoose from "../components/WhyChoose";
 import CtaGetQuote from "../components/CtaGetQuote";
 import CTADuo from "../components/CTADuo";
+import ScrollUp from "../components/ScrollUp";
 
 
 
@@ -122,6 +123,7 @@ const Home = () => {
                     <CtaGetQuote/>
                     <SiteFooter />
                   </div>
+                  <ScrollUp threshold={600} /> {/* ✅ lives with layout UI */}
     </main>
   );
 };

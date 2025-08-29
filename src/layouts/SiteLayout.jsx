@@ -6,6 +6,7 @@ export default function SiteLayout() {
     <>
       <Navbar />
       <Outlet />   {/* this renders your page content */}
+      
     </>
   );
 }

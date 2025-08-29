@@ -190,7 +190,7 @@ export default function About() {
         primaryHref="/services"
         primaryLabel="Learn more about our Cleaning Services"
         secondaryHref="tel:+18884776243"
-        secondaryLabel="Call us at 1-888-477-MAID"
+        secondaryLabel="Call us at 1-888-477-999"
       />
 
 
