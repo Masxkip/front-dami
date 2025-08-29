@@ -9,7 +9,6 @@ import Service from "./pages/Service";
 import Fqs from "./pages/Fqs";
 import ScrollToTop from "./components/ScrollToTop";
 import SiteLayout from "./layouts/SiteLayout";
-import ScrollUp from "./components/ScrollUp";
 
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
           <Route path="/quote" element={<Quote />} />
         </Route>
       </Routes>
-      <ScrollUp threshold={200} />
     </Router>
   );
 }

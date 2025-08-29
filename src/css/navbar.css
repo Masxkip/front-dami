@@ -1,88 +1,67 @@
-/* --------- height + sticky scaffold --------- */
-:root { --header-h: 92px; --hero-radius: 28px; }
-@media (min-width: 992px){ :root { --header-h: 102px; } }
+/* 1) One source of truth for header height */
+:root { --header-h: 72px; }
+@media (min-width: 992px){ :root { --header-h: 88px; } }
 
-.bd-header-wrap{ position: fixed; inset: 0 0 auto 0; z-index: 1100; }
-html, body { margin: 0; }
+/* 2) Fixed header wrapper */
+.bd-header-wrap{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1100;
+}
+
+/* 3) Push the document so content isn’t under the header */
+html, body { margin:0; }
 body { padding-top: var(--header-h); }
 
-/* prevent body scroll when drawer is open */
-.bd-lock { position: fixed; overflow: hidden; width: 100%; }
-
-/* --------- header bar --------- */
+/* Header bar */
 .bd-header{
-  height: var(--header-h);
+  height: var(--header-h);        /* <- use the same variable */
   background: var(--bd-blue, #8b61ec);
   color: var(--bd-text, #fff);
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
   gap: clamp(18px, 4vw, 64px);
   padding: 0 clamp(16px, 4vw, 40px);
   box-shadow: 0 6px 18px rgba(0,0,0,.12);
 }
 
-/* --------- brand --------- */
-.bd-brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
-.bd-brand-img{
-  height: clamp(48px, 8.2vw, 74px); /* ✅ scales nicely mobile → desktop */
-  width: auto; display:block; object-fit: contain;
-  filter: drop-shadow(0 0 0 rgba(0,0,0,0)); /* keeps crisp edges on light logos */
+/* Brand (now visible) */
+.bd-brand{
+  display:flex; align-items:center; gap:10px; color:inherit; text-decoration:none;
 }
-.bd-wordmark{ font-weight:800; letter-spacing:.2px; display:none; }
-@media (min-width: 992px){ .bd-wordmark{ display:inline; } }
+.bd-logo{
+  display:inline-grid; place-items:center;
+  width:40px; height:40px; border-radius:10px; background:#fff; color:#57037b;
+  font-weight:900;
+}
+.bd-wordmark{ font-weight:800; letter-spacing:.2px; }
 
-/* --------- desktop nav --------- */
-.bd-nav{ display:none; align-items:center; gap:28px; margin-left:12px; flex:0 1 auto; }
-.bd-nav a{ color:inherit; text-decoration:none; font-weight:700; opacity:.95; }
-.bd-nav a:hover{ opacity:1; text-underline-offset: 4px; text-decoration: underline; }
-/* Works with NavLink in React Router v6 */
-.bd-nav a[aria-current="page"]{ text-decoration: underline; text-underline-offset:4px; }
+/* Desktop nav */
+.bd-nav{
+  display:none; align-items:center; gap:28px; margin-left:24px; flex:0 1 auto;
+}
+.bd-nav a{ color: inherit; text-decoration:none; font-weight:700; opacity:.95; }
+.bd-nav a:hover{ opacity:1; text-decoration:underline; }
+.bd-nav a.active{ text-decoration:underline; }
 
-/* --------- actions --------- */
+/* Right-side actions */
 .bd-actions{ margin-left:auto; display:flex; align-items:center; gap:12px; }
-
-/* bigger call button + hover */
 .bd-call{
-  width: 50px; height: 50px; border-radius: 14px;
-  background:#fff; color:#57037b;
+  width:44px; height:44px; border-radius:12px; background:#fff; color:#57037b;
   display:inline-flex; align-items:center; justify-content:center;
-  border:1px solid rgba(0,0,0,.12);
-  box-shadow: 0 4px 10px rgba(0,0,0,.08) inset, 0 2px 10px rgba(0,0,0,.12);
-  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  border:1px solid rgba(0,0,0,.12); box-shadow:0 4px 10px rgba(0,0,0,.08) inset, 0 2px 10px rgba(0,0,0,.12);
 }
-.bd-call:hover{ transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,.14); background:#f8f8ff; }
-.bd-call:active{ transform: translateY(0); }
-
-/* CTA only on desktop */
 .bd-cta{
   display:none; background:#fff; color:#57037b; padding:12px 22px; border-radius:999px;
   font-weight:800; text-decoration:none;
   box-shadow:0 4px 10px rgba(0,0,0,.12) inset, 0 2px 10px rgba(0,0,0,.12);
 }
+.bd-burger{ display:inline-flex; align-items:center; justify-content:center; background:transparent; border:none; color:inherit; }
 
-/* --------- hamburger with hover micro-interaction --------- */
-.bd-burger{
-  --size: 46px;
-  width: var(--size); height: var(--size);
-  display:inline-flex; align-items:center; justify-content:center;
-  border:none; background:transparent; color:inherit; border-radius: 12px;
-  transition: background-color .18s ease, box-shadow .18s ease, transform .18s ease;
-  outline: none;
-}
-.bd-burger:hover{
-  background: rgba(255,255,255,.12);
-  box-shadow: 0 4px 12px rgba(0,0,0,.18) inset;
-  transform: translateY(-1px);
-}
-.bd-burger:active{ transform: translateY(0); }
-.bd-burger svg{ transition: transform .22s ease; }
-/* subtle rotate when hovering; resets when open changes icon */
-.bd-burger:hover svg{ transform: rotate(12deg) scale(1.05); }
-.bd-burger[data-open="true"]:hover svg{ transform: rotate(-12deg) scale(1.05); }
-.bd-burger:focus-visible{ outline: 2px solid #fff; outline-offset: 2px; border-radius: 12px; }
-
-/* --------- mobile drawer --------- */
+/* Mobile drawer */
 .bd-mobile{
-  position: fixed; inset: var(--header-h) 0 0 0;
+  position: fixed;
+  inset: var(--header-h) 0 0 0;
   z-index: 990;
   background: rgba(0,0,0,.35);
   opacity: 0; pointer-events: none; transition: opacity .2s ease;
@@ -90,16 +69,14 @@ body { padding-top: var(--header-h); }
 .bd-mobile.open{ opacity:1; pointer-events:auto; }
 .bd-mobile-nav{
   position:absolute; right:0; top:0; bottom:0; width:min(78vw,360px);
-  background: var(--bd-blue, #8b61ec); padding:20px;
-  display:grid; align-content:start; gap:16px;
-  transform: translateX(100%); transition: transform .25s ease;
-  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  background: var(--bd-blue, #8b61ec); padding:20px; display:grid; align-content:start; gap:16px;
+  transform: translateX(100%); transition: transform .25s ease; box-shadow: 0 6px 18px rgba(0,0,0,.12);
   overflow-y:auto;
 }
 .bd-mobile.open .bd-mobile-nav{ transform: translateX(0); }
 .bd-mobile-nav a{ color:#fff; text-decoration:none; font-weight:700; font-size:18px; }
 
-/* --------- desktop breakpoint --------- */
+/* Desktop breakpoint */
 @media (min-width: 992px){
   .bd-nav{ display:flex; }
   .bd-cta{ display:inline-flex; }
