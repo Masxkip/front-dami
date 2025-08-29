@@ -34,16 +34,35 @@ export default function Contact() {
     setError("");
 
     try {
-      await fetch(`${API_URL || ""}/api/contact`, {
+      const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      }).catch(() => new Promise((res) => setTimeout(res, 800))); // demo fallback
+        // Backend accepts fullName (and name), email, phone, message
+        body: JSON.stringify({
+          fullName: form.fullName,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+        }),
+      });
+
+      let data = null;
+      try { data = await res.json(); } catch {}
+
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || `Request failed (${res.status})`);
+      }
 
       setDone(true);
       setForm({ fullName: "", email: "", phone: "", message: "" });
-    } catch {
-      setError("We couldn’t send your message. Please try again.");
+
+      if (data.preview) {
+        // Ethereal preview URL (only during testing with Ethereal)
+        console.log("Ethereal preview:", data.preview);
+      }
+    } catch (err) {
+      setError(err.message || "We couldn’t send your message. Please try again.");
+      setDone(false);
     } finally {
       setLoading(false);
     }
@@ -60,9 +79,7 @@ export default function Contact() {
         align="left"
       />
       {/* NEW: black band under the curved hero */}
-<div className="page-hero-band" aria-hidden="true" />
-
-      
+      <div className="page-hero-band" aria-hidden="true" />
 
       <section className="container pop-into-band">
         <div className="contact-grid">
@@ -106,7 +123,6 @@ export default function Contact() {
                 <div className="hours">
                   <div className="info-label">Service Hours</div>
                   <ul>
-                    {/* Edit these to your real hours */}
                     <li><span>Mon–Fri</span><span>8:00 AM – 6:00 PM</span></li>
                     <li><span>Sat</span><span>9:00 AM – 3:00 PM</span></li>
                     <li><span>Sun</span><span>Closed</span></li>
@@ -173,7 +189,7 @@ export default function Contact() {
                 />
               </div>
 
-              {error && <p className="error">{error}</p>}
+              {error && <p className="error" role="alert">{error}</p>}
               {done && <p className="success">Thanks! Your message was sent.</p>}
 
               <div className="actions">
@@ -186,23 +202,20 @@ export default function Contact() {
         </div>
       </section>
 
+      <FAQSection
+        items={[
+          { q: "What areas do you service?", a: "London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo." },
+          { q: "Are you insured?", a: "Yes—fully licensed and insured for residential, office, and post-construction." },
+          { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
+        ]}
+        ctaHref="/faqs"
+        ctaLabel="VIEW ALL FAQS"
+        hugNext
+      />
 
-              <FAQSection
-              items={[
-                { q: "What areas do you service?", a: "London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo." },
-                { q: "Are you insured?", a: "Yes—fully licensed and insured for residential, office, and post-construction." },
-                { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
-              ]}
-              ctaHref="/faqs"
-              ctaLabel="VIEW ALL FAQS"
-              hugNext
-            />
-      
-      
-              <div className="footer-wrap">
-                                <SiteFooter />
-                              </div>
-
+      <div className="footer-wrap">
+        <SiteFooter />
+      </div>
     </main>
   );
 }
