@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "../assets/m1.png";          // ✅ import the image
 import "../css/navbar.css";
+
 
 
 const DESKTOP_Q = "(min-width: 992px)";
@@ -42,8 +44,9 @@ export default function Navbar() {
         <header className="bd-header" role="banner">
           {/* Brand — add your image or text here */}
                     {/* Brand */}
-          <Link to="/" className="bd-brand" aria-label="Blue Diamond Home">
-            <img src="../assets/m1.png" alt="Heart & Care Logo" className="bd-diamond" />
+          <Link to="/" className="bd-brand" aria-label="Heart & Care Cleaning — Home">
+            <img src={logo} alt="Heart & Care Logo" className="bd-brand-img" />
+        
           </Link>
 
           {/* Desktop nav */}
