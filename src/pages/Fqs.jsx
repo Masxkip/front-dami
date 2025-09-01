@@ -106,7 +106,7 @@ export default function Fqs() {
       />
       <div className="page-hero-band" aria-hidden="true" />
 
-      {/* Only the pills (centered) */}
+      {/* Only the pills*/}
       <section className="fqs-controls section">
         <div className="container">
           <nav className="fqs-pills center" aria-label="FAQ categories">
