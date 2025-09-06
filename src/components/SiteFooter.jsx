@@ -7,16 +7,16 @@ import "../css/footer.css";
 
 export default function SiteFooter({
   // NEW: footer-only props
-  serviceAreasText = "We proudly offer premium residential cleaning services across London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo.",
+  serviceAreasText = "Heart & Care Cleaning Services is proud to keep homes sparkling across Woodstock, Tillsonburg, and all of Oxford County.",
   phoneLabel = "Call Us",
-  phone = "(519) 681-7827",
-  phoneHref = "tel:+15196817827",
+  phone = "(438) 925-5351",
+  phoneHref = "tel:+14389265251",
   emailLabel = "Email Us",
-  email = "info@bdwc.ca",
-  emailHref = "mailto:info@bdwc.ca",
+  email = "info@heartandcarecleaningservices.ca",
+  emailHref = "mailto:info@heartandcarecleaningservices.ca",
   locationLabel = "Location",
   addressLines = ["Woodstock, ON"],
-  copyright = "Copyright © 2025 | All Rights Reserved.",
+  copyright = "Copyright © heartandcarecleaningservices 2025 | All Rights Reserved.",
   privacyHref = "/privacy-policy",
 }) {
   return (

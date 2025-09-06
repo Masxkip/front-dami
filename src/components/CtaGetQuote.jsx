@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import "../css/footer.css"; // reuses .cta-band styles you already have
 
 export default function CtaGetQuote({
-  ctaTitle = "Ready for a partner that will always back you?",
-  ctaSubtitle = "Contact H&C Cleaning for your free, no-obligation quote.",
+  ctaTitle = "Ready for a cleaner, fresher space?",
+  ctaSubtitle = "Heart & Care Cleaning Services is here to deliver spotless results you can count on. Get your free, no-obligation quote today and let us bring the sparkle back.",
   ctaButtonText = "GET A QUOTE TODAY",
 }) {
   return (

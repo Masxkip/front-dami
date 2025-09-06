@@ -111,7 +111,7 @@ export default function Quote() {
                 </div>
                 <div className="field">
                   <label htmlFor="city">City/Area</label>
-                  <input id="city" name="city" value={form.city} onChange={onChange} placeholder="e.g., London, ON" />
+                  <input id="city" name="city" value={form.city} onChange={onChange} placeholder="e.g., Woodstock, ON" />
                 </div>
               </div>
 
@@ -121,11 +121,10 @@ export default function Quote() {
                   <select id="service" name="service" value={form.service} onChange={onChange} required>
                     <option value="">Select a service</option>
                     <option>Standard House Cleaning</option>
-                    <option>Deep Cleaning</option>
-                    <option>Move In / Move Out</option>
-                    <option>Post-Construction</option>
-                    <option>Office / Commercial</option>
-                    <option>Window Cleaning</option>
+                    <option>Detailed Deep Cleaning</option>
+                    <option>Weekly/ Monthly Home Cleaning</option>
+                    <option>Office / Commercial Sanitization</option>
+                    <option>Move In / Move Out Cleaning</option>
                     <option>Other</option>
                   </select>
                 </div>
@@ -165,7 +164,7 @@ export default function Quote() {
                 <button className="btn-primary" disabled={loading}>
                   {loading ? "Sending..." : "Get my quote"}
                 </button>
-                <span className="help">Prefer to talk? Call us: <strong>(555) 555-5555</strong></span>
+                <span className="help">Prefer to talk? Call us: <strong>(438) 925-5351</strong></span>
               </div>
             </form>
           </div>
@@ -185,12 +184,12 @@ export default function Quote() {
               <span className="badge">Deep Clean</span>
               <span className="badge">Move In/Out</span>
               <span className="badge">Office</span>
-              <span className="badge">Windows</span>
             </div>
 
             <div className="spacer" />
             <h4 className="h4">Service Hours</h4>
             <p className="muted">MON–FRI: <span>8:00 AM – 6:00 PM</span></p>
+            <p className="muted">SAT–SUN: <span>8:00 AM – 6:00 PM</span></p>
 
             <h4 className="h4">Response time</h4>
             <p className="muted">We usually reply within a few business hours.</p>

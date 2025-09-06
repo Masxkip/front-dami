@@ -10,8 +10,8 @@ import "../css/cta-duo.css";
 export default function CTADuo({
   // Button texts + links
   primaryLabel = "Learn more about our Cleaning Services",
-  secondaryHref = "tel:+18884776243",
-  secondaryLabel = "Call us at 1-888-477-999",
+  secondaryHref = "tel:+14389265251",
+  secondaryLabel = "Call us at 1-438-925-5351",
 
   // Theming knobs (match your About page defaults)
   accent = "#8b61ec",     // purple accent

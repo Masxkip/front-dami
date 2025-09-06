@@ -48,8 +48,7 @@ export default function About() {
               our own and every client like a neighbour.
             </p>
             <p className="muted">
-              Today we proudly serve <strong>Woodstock, Ingersoll, Tillsonburg, London, Kitchener,
-              Waterloo,</strong> and <strong>Brantford</strong>. Whether it’s weekly home care, post-construction
+              Today we proudly serve <strong>Woodstock, Ingersoll, </strong> and <strong>Oxford County area</strong>. Whether it’s weekly home care, post-construction
               detail, or a sparkling office, our story is still the same—show up, do excellent
               work, and leave spaces better than we found them.
             </p>
@@ -68,7 +67,7 @@ export default function About() {
     <header className="mission-header">
       <h2 className="h2">Our Core Mission at H&amp;C Cleaning</h2>
       <p className="mission-subtitle">
-        What guides every clean—and how we show up for our community.
+        What guides every clean and how we show up for our community.
       </p>
     </header>
 
@@ -189,8 +188,8 @@ export default function About() {
       <CTADuo
         primaryHref="/services"
         primaryLabel="Learn more about our Cleaning Services"
-        secondaryHref="tel:+18884776243"
-        secondaryLabel="Call us at 1-888-477-999"
+        secondaryHref="tel:+14389265251"
+        secondaryLabel="Call us at 1-438-925-5351"
       />
 
 

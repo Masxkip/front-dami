@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
-import logo from "../assets/m1.png";          // ✅ import the image
+import { Menu, X, Phone } from "lucide-react";        
 import "../css/navbar.css";
 
+import { cld } from "../lib/cloudinary";
+import { IMG } from "../assets/cloudinaryImages";
 
+const navbarh = cld(IMG.navbar, "f_auto,q_auto,w_1920,c_fill,g_center");
 
 const DESKTOP_Q = "(min-width: 992px)";
 
@@ -45,7 +47,7 @@ export default function Navbar() {
           {/* Brand — add your image or text here */}
                     {/* Brand */}
           <Link to="/" className="bd-brand" aria-label="Heart & Care Cleaning — Home">
-            <img src={logo} alt="Heart & Care Logo" className="bd-brand-img" />
+            <img src={navbarh} alt="Heart & Care Logo" className="bd-brand-img" />
         
           </Link>
 
@@ -60,7 +62,7 @@ export default function Navbar() {
 
           {/* Actions (right) */}
           <div className="bd-actions">
-            <a href="tel:+14389265351" className="bd-call" aria-label="Call us" title="Call us">
+            <a href="tel:+14389265251" className="bd-call" aria-label="Call us" title="Call us">
               <Phone size={18} strokeWidth={2.5} />
             </a>
             <Link to="/quote" className="bd-cta">Get A Quote</Link>

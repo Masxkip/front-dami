@@ -110,8 +110,8 @@ export default function ServiceIntro({
       <CTADuo
         primaryHref="/services"
         primaryLabel="Learn more about our Cleaning Services"
-        secondaryHref="tel:+18884776243"
-        secondaryLabel="Call us at 1-888-477-999"
+        secondaryHref="tel:+14389265251"
+        secondaryLabel="Call us at 1-438-925-5351"
       />
 
       {/* === Service Frequencies / Plans === */}
@@ -122,6 +122,10 @@ export default function ServiceIntro({
           </header>
           <ul className="tiers-grid" role="list">
             <li className="tier-card">
+              <h3 className="tier-title">One-time Deep Cleaning</h3>
+              <p className="tier-text">Need a thorough clean just once? We’ll handle the heavy lift and reset your space.</p>
+            </li>
+            <li className="tier-card">
               <h3 className="tier-title">Weekly Cleaning</h3>
               <p className="tier-text">Week after week, enjoy the delight of a refreshingly clean and impeccably organized space.</p>
             </li>
@@ -129,10 +133,7 @@ export default function ServiceIntro({
               <h3 className="tier-title">Bi-weekly Cleaning</h3>
               <p className="tier-text">Simplify your life with a hassle-free cleaning rhythm and a consistently tidy home.</p>
             </li>
-            <li className="tier-card">
-              <h3 className="tier-title">One-time Deep Cleaning</h3>
-              <p className="tier-text">Need a thorough clean just once? We’ll handle the heavy lift and reset your space.</p>
-            </li>
+            
           </ul>
         </div>
      

@@ -160,12 +160,50 @@ input, textarea { font: inherit; color: inherit; background: transparent; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("../assets/i1.jpg") center / cover no-repeat;
-  opacity: .18;               /* keep text readable; tweak if needed */
+
+  /* ⬇️ Use a CSS variable for the image, keep the same positioning */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: var(--hero-bg); /* <-- we’ll set this from React */
+
+  opacity: .18;         /* keep your readability */
   filter: saturate(1.1);
-   z-index: 0; 
-  
+  z-index: 0;
 }
+
+
+/* ==== HERO slider layers (no controls) ==== */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* keep your vibe: */
+  opacity: .9999; /* ensure the container itself is visible */
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(1.1);
+  opacity: 0;
+  transition: opacity 900ms ease; /* modern, smooth */
+  will-change: opacity;
+}
+
+/* active slide fades in */
+.hero-slide.is-active {
+  opacity: .18; /* matches your previous .hero-bg opacity for readability */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { transition: none; }
+}
+
 
 /* Hero content */
 .hero-inner {

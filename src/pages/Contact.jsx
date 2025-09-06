@@ -5,8 +5,13 @@ import "../css/contact.css";
 import FAQSection from "../components/FAQSection";
 import SiteFooter from "../components/SiteFooter";
 
-// Swap for your image (or a public path like "/images/contact-hero.jpg")
-import heroBg from "../assets/i1.jpg";
+// REMOVE this if present:
+// import { cld } from "../lib/cloudinary";
+import { IMG } from "../assets/cloudinaryImages";
+
+
+
+
 
 const API_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -70,14 +75,16 @@ export default function Contact() {
 
   return (
     <main className="contact-page">
-      <SectionHero
-        title="Contact Us"
-        subtitle="Call, email, or send a quick message—our team will get back to you promptly."
-        bgImage={heroBg}
-        height="44vh"
-        rounded
-        align="left"
-      />
+  <SectionHero
+  title="Contact Us"
+  subtitle="Call, email, or send a quick message—our team will get back to you promptly."
+  bgPublicId={IMG.hero}
+  height="44vh"
+  rounded
+  align="left"
+/>
+
+
       {/* NEW: black band under the curved hero */}
       <div className="page-hero-band" aria-hidden="true" />
 
@@ -92,8 +99,8 @@ export default function Contact() {
                 <span className="icon"><Phone size={22} /></span>
                 <div>
                   <div className="info-label">Call Us</div>
-                  <a href="tel:+15196817827" className="info-value">
-                    (519) 681-7827
+                  <a href="tel:+14389265251" className="info-value">
+                    (438) 925-5351
                   </a>
                 </div>
               </li>
@@ -102,8 +109,8 @@ export default function Contact() {
                 <span className="icon"><Mail size={22} /></span>
                 <div>
                   <div className="info-label">Email Us</div>
-                  <a href="mailto:info@bluediamondlondon.ca" className="info-value">
-                    info@bluediamondlondon.ca
+                  <a href="mailto:info@heartandcarecleaningservices.ca" className="info-value">
+                    info@heartandcarecleaningservices.ca
                   </a>
                 </div>
               </li>
