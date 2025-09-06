@@ -63,14 +63,19 @@ const Home = () => {
         </div>
 
         <div className="hero-inner container">
-          <h1 className="h1">Your Trusted Partner for Spotless Cleaning Experience!</h1>
+          <h1 className="h1">Your Trusted Partner for a Spotless Cleaning Experience!</h1>
+          
           <p className="lead">
-            Your trusted cleaning service for homes and offices — fast, reliable, and spotless results every time.
+             Let us handle the cleaning so you can focus on what matters most.
+
+             We Serve Across <strong>London, Woodstock,</strong> And <strong>Oxford County area.</strong>
           </p>
+         
           <div className="cta-row">
             <Link to="/quote" className="btn btn-primary">Book a Cleaning</Link>
             <Link to="/services" className="btn btn-primary">View Services</Link>
           </div>
+          
         </div>
       </section>
 

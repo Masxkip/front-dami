@@ -20,7 +20,7 @@ export default function About() {
     <main className="about-page">
       <SectionHero
         title="Heart & Care Cleaning Services"
-        subtitle="Local, trustworthy, and detail-obsessed—meet the team behind the sparkle."
+        subtitle="Licensed, family-owned, and community-focused cleaning service you can count on."
         bgImage={heroBg}
         height="44vh"
         rounded
@@ -38,21 +38,30 @@ export default function About() {
               <span className="story-underline" style={{ backgroundColor: "#8b61ec" }} />
             </h2>
             <p className="muted">
-              Heart &amp; Care began as a <strong>licensed, family-owned</strong> team with a simple goal:
-              deliver dependable cleaning that neighbours can trust. What started as helping
-              friends and local families grew into a small, community-oriented company known
-              for consistency, kindness, and care.
-              We’ve grown by word of mouth—investing in our people, refining our checklists,
-              and using tools that help us clean smarter and safer. Through every stage, we’ve
-              stayed true to who we are: a <strong>small local business</strong> that treats every home like
-              our own and every client like a neighbour.
-            </p>
-            <p className="muted">
-              Today we proudly serve <strong>Woodstock, Ingersoll, </strong> and <strong>Oxford County area</strong>. Whether it’s weekly home care, post-construction
-              detail, or a sparkling office, our story is still the same—show up, do excellent
-              work, and leave spaces better than we found them.
-            </p>
-          </div>
+          Heart &amp; Care began as a <strong>licensed, family-owned</strong> team with a simple goal:
+          deliver dependable cleaning that neighbours can trust. What started as helping
+          friends and local families grew into a small, community-oriented company known
+          for consistency, kindness, and care. We’ve grown by word of mouth, by investing in
+          our people, refining our checklists, and using tools that help us clean smarter
+          and safer. Through every stage, we’ve stayed true to who we are: a <strong>small local business</strong>
+          that treats every home like our own and every client like a neighbour.
+        </p>
+
+        <p className="muted">
+          Today we proudly serve <strong>Woodstock, Ingersoll,</strong> and the <strong>Oxford County area</strong>.
+          Whether it’s weekly home care, post-construction detail, or a sparkling office,
+          our story is still the same show up, do excellent work, and leave spaces better
+          than we found them. As we continue to grow, our mission remains simple:
+          bring reliable, caring cleaning to every home and business we touch.
+        </p>
+
+        <p className="muted">
+          Fully licensed and insured, we safeguard your privacy, respect your space, and
+          deliver peace of mind on every visit. At Heart &amp; Care, cleaning is more than a service, 
+          it’s a way of caring for people, families, and communities.
+        </p>
+
+      </div>
          <div className="story-media">
             <img src={storyImg} alt="Our team at Heart & Care Cleaning Services" className="story-img" />
           </div>
@@ -61,16 +70,15 @@ export default function About() {
       </section>
 
 
- {/* OUR CORE MISSION */}
-    <section className="mission section" id="core-mission">
-      <div className="container">
+{/* OUR CORE MISSION */}
+<section className="mission section" id="core-mission">
+  <div className="container">
     <header className="mission-header">
       <h2 className="h2">Our Core Mission at H&amp;C Cleaning</h2>
       <p className="mission-subtitle">
         What guides every clean and how we show up for our community.
       </p>
     </header>
-
 
     <div className="mission-list">
       {/* 1 — image LEFT, copy RIGHT */}
@@ -79,26 +87,38 @@ export default function About() {
           <img src={mission1} alt="Consistent, high-standard cleaning" className="mission-img" />
         </div>
         <div className="mission-copy">
-          <h3 className="h3">Quality, Every Visit</h3>
+          <h3 className="h3">Delighting Homeowners</h3>
           <p className="muted">
-            We deliver dependable results on each clean—guided by clear checklists, ongoing training,
-            and modern tools—so every space meets our highest standards.
-                        We deliver dependable results on each clean—guided by clear checklists, ongoing training,
-            and modern tools—so every space meets our highest standards.
-                        We deliver dependable results on each clean—guided by clear checklists, ongoing training,
-            and modern tools—so every space meets our highest standards.
+            We treat every home like our own, with care, respect, and an eye for detail. From the first
+            dusting to the final polish, we aim to exceed expectations on every visit. Our licensed,
+            family-owned team follows clear checklists, respects your routines, and communicates
+            proactively so you always know what’s done and what’s next. The result: a space that feels
+            refreshed, healthy, and genuinely looked after.
           </p>
+          <ul className="service-bullets" role="list">
+            <li>Room-by-room checklists for consistent results</li>
+            <li>Respect for your time, privacy, and preferences</li>
+            <li>Eco-friendly options available on request</li>
+          </ul>
         </div>
       </article>
 
       {/* 2 — copy LEFT, image RIGHT */}
       <article className="mission-item is-reverse">
         <div className="mission-copy">
-          <h3 className="h3">Licensed, Family-Owned &amp; Community-Oriented</h3>
+          <h3 className="h3">Building Trust, Serving Community</h3>
           <p className="muted">
-            H&amp;C is proudly licensed and family-run. We’ve grown by caring for our neighbours and
-            investing in our team—staying small enough to know you, and professional enough to earn your trust.
+            Heart &amp; Care began by helping friends and neighbours, and we’ve grown by word of mouth
+            ever since. Trust is at the center of how we work: we show up reliably, safeguard personal
+            information, and take pride in leaving every space better than we found it. As a small,
+            community-oriented company, we invest in our people and keep our promises, because that’s
+            what good neighbours do.
           </p>
+          <ul className="service-bullets" role="list">
+            <li>Licensed, insured, and accountability-first</li>
+            <li>Clear, friendly communication before and after each visit</li>
+            <li>People-first culture that supports our team and clients</li>
+          </ul>
         </div>
         <div className="mission-media">
           <img src={mission2} alt="Family-owned, community-focused team" className="mission-img" />
@@ -111,11 +131,19 @@ export default function About() {
           <img src={mission3} alt="Simple, flexible service" className="mission-img" />
         </div>
         <div className="mission-copy">
-          <h3 className="h3">Simple &amp; Flexible Service</h3>
+          <h3 className="h3">Smarter Tools, Flexible Service</h3>
           <p className="muted">
-            Cleaning that fits your life—clear, upfront scheduling and plans tailored to your home or office,
-            without hassle.
+            Cleaning should bring comfort, clarity, and peace of mind. We rely on proven methods, modern tools,
+            and ongoing training to ensure every clean is both thorough and safe. From weekly upkeep to detailed
+            deep cleans and move-ready services, we tailor plans to your home or business with scheduling that
+            fits your life. Simple, transparent, flexible, dependable.
           </p>
+
+          <ul className="service-bullets" role="list">
+            <li>Refined checklists and quality control on every job</li>
+            <li>Plans tailored to homes, offices, and move-in/move-out needs</li>
+            <li>Easy scheduling, reminders, and upfront pricing</li>
+          </ul>
         </div>
       </article>
     </div>
@@ -135,19 +163,20 @@ export default function About() {
       <span className="values-underline" style={{ backgroundColor: "#7b61ff" }} />
     </header>
 
-    <div className="values-copy">
+     <div className="values-copy">
       <p className="muted">
         We built H&amp;C as a <strong>licensed, family-owned</strong> company with a small-community mindset.
         That means showing up with <strong>mutual trust, integrity, and respect</strong>, being
         <strong> professional and reliable</strong> on every visit, and keeping
-        <strong> communication efficient</strong> so your schedule—and your day—run smoothly.
+        <strong> communication efficient</strong> so your schedule and your day run smoothly.
       </p>
       <p className="muted">
-        Your <strong>privacy and safety</strong> are non-negotiable. We safeguard personal information,
-        follow safe working practices, and treat your space with care. We’re <strong>people-first</strong>—supporting
-        our cleaners, serving our neighbours, and always <strong>improving</strong> our tools and checklists
-        to deliver consistent results.
-      </p>
+  We place the highest priority on <strong>privacy and safety</strong>, treating every home with the same
+  respect we give our own. Personal information is protected, safe practices are followed, and every
+  detail is handled with care. We are <strong>people-first</strong>, supporting our cleaners, serving our
+  neighbours, and <strong>improving</strong> our tools and checklists to ensure reliable, consistent results.
+</p>
+
     </div>
 
     {/* Six-value grid (2 rows × 3 columns on desktop) */}

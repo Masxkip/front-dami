@@ -7,7 +7,7 @@ import "../css/footer.css";
 
 export default function SiteFooter({
   // NEW: footer-only props
-  serviceAreasText = "Heart & Care Cleaning Services is proud to keep homes sparkling across Woodstock, Tillsonburg, and all of Oxford County.",
+  serviceAreasText = "Heart and Care Cleaning Services is proud to keep homes sparkling across Woodstock, Tillsonburg, and all of Oxford County.",
   phoneLabel = "Call Us",
   phone = "(438) 925-5351",
   phoneHref = "tel:+14389265251",

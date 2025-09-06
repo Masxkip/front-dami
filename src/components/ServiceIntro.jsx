@@ -11,14 +11,15 @@ import heroBg4 from "../assets/m1.png";
 export default function ServiceIntro({
 
   quoteHref = "/quote",
-  introTitle = "Premium Cleaning, Local Care",
+  introTitle = "Custom Cleaning Services Tailored For You",
   introBody = (
     <>
-      We proudly serve <strong>Woodstock, Ingersoll, Tillsonburg, London,
-      Kitchener, Waterloo</strong>, and <strong>Brantford</strong>. As a licensed,
-      family-owned company, we focus on dependable quality, clear communication,
-      and flexible scheduling. Eco-friendly options are available on request.
-      <strong> Our Buisness Hours:</strong>
+       We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with 
+          professional cleaning for both homes and businesses. From routine upkeep to detailed deep cleans, 
+          move-in/move-out services, and office sanitization, our licensed professional team delivers 
+          dependable quality, clear communication, and flexible scheduling. Eco-friendly options are always 
+          available on request.
+          <br /> <strong>Our Service Hours:</strong> <strong>MON-FRI:</strong> 9:00AM - 5:00PM <strong>|</strong> <strong>SAT-SUN:</strong> 9:00AM - 5:00PM
     </>
   ),
   tiersTitle = (
@@ -49,16 +50,17 @@ export default function ServiceIntro({
               <img src={heroBg1} alt="Residential cleaning" className="service-img" />
             </div>
             <div className="service-copy">
-              <h3 className="h3">Residential Cleaning</h3>
+              <h3 className="h3">Detailed Deep Cleaning</h3>
               <p className="muted">
-                Routine, deep, and custom house cleaning—bedrooms, kitchens, bathrooms, and
-                living spaces—plus helpful add-ons like linen changes and dish care. Upfront
-                pricing and dependable quality every visit.
+                When your space needs a true reset, our deep clean goes beyond the basics. We target
+                hard-to-reach and often-missed areas—inside appliances and cabinets, baseboards, vents,
+                trim, and more—to restore a like-new feel for seasonal refreshes or special occasions.
               </p>
-              <ul className="service-bullets" role="list">
-                <li>Weekly, bi-weekly, monthly</li>
-                <li>Deep cleans &amp; move-ready shines</li>
-                <li>Clear, upfront pricing</li>
+             <ul className="service-bullets" role="list">
+                <li>Inside ovens, fridges & cabinets</li>
+                <li>Baseboards, vents, trim & fixtures</li>
+                <li>Behind/under furniture attention</li>
+                <li>Ideal for seasonal or one-time reset</li>
               </ul>
               <br />
               <Link to="/quote" className="btn-primary">Get a quote →</Link>
@@ -70,15 +72,17 @@ export default function ServiceIntro({
               <img src={heroBg2} alt="Post-construction cleaning" className="service-img" />
             </div>
             <div className="service-copy">
-              <h3 className="h3">Post-Construction Cleaning</h3>
+              <h3 className="h3">Office / Commercial Sanitization</h3>
               <p className="muted">
-                Careful, detailed dust removal and polish after renovations or new builds so the
-                space looks finished and feels safe.
+                A clean workspace supports a healthy team and a welcoming client experience. From routine
+                janitorial tasks to sanitizing high-touch areas, we tailor scopes and after-hours schedules
+                to your business needs with professional, discreet service.
               </p>
               <ul className="service-bullets" role="list">
-                <li>Fine dust control</li>
-                <li>Cabinets, baseboards, glass</li>
-                <li>Final turnover ready</li>
+                <li>After-hours & custom schedules</li>
+                <li>Desks, doors & shared-area sanitizing</li>
+                <li>Restrooms, kitchens & reception care</li>
+                <li>Reliable, insured, professional staff</li>
               </ul>
               <br />
               <Link to="/quote" className="btn-primary">Get a quote →</Link>
@@ -90,15 +94,16 @@ export default function ServiceIntro({
               <img src={heroBg3} alt="Office and commercial cleaning" className="service-img" />
             </div>
             <div className="service-copy">
-              <h3 className="h3">Office &amp; Commercial</h3>
+              <h3 className="h3">Move In / Move Out Cleaning</h3>
               <p className="muted">
-                Professional cleaning for offices and workspaces—consistent results that support a
-                healthy team and a welcoming client experience.
+                Start fresh or hand over the keys with confidence. We clean empty homes top-to-bottom—
+                interiors, appliances, and fixtures—so moving day is simpler and final walkthroughs are a breeze.
               </p>
               <ul className="service-bullets" role="list">
-                <li>After-hours available</li>
-                <li>Custom scopes &amp; schedules</li>
-                <li>Sanitizing high-touch areas</li>
+                <li>Inside cabinets, closets & appliances</li>
+                <li>Baseboards, fixtures & doors detailed</li>
+                <li>Kitchen & bathroom sanitization</li>
+                <li>Landlord, tenant & realtor-ready finish</li>
               </ul>
               <br />
               <a className="btn-primary" href={quoteHref}>Get a quote →</a>

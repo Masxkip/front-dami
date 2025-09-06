@@ -29,12 +29,14 @@ export default function Service() {
       {/* --- Intro (no pop) --- */}
       <section className="service-intro section">
         <div className="container">
-          <h2 className="h2">Cleaning Services Designed Around Your Needs</h2>
+          <h2 className="h2">Custom Cleaning Services Tailored For You</h2>
           <p className="muted">
-            We proudly serve <strong>Woodstock, Tillsonburg,</strong> and <strong>Oxford County area</strong>. As a licensed, family-owned
-            company, we focus on dependable quality, clear communication, and flexible scheduling.
-            Eco-friendly options are available on request.
-          </p>
+          We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with 
+          professional cleaning for both homes and businesses. From routine upkeep to detailed deep cleans, 
+          move-in/move-out services, and office sanitization, our licensed professional team delivers 
+          dependable quality, clear communication, and flexible scheduling. Eco-friendly options are always 
+          available on request.
+        </p>
         </div>
       </section>
 

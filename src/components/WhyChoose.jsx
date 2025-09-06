@@ -9,9 +9,9 @@ export default function WhyChoose({
       Why Choose <span className="why-accent">H&C Cleaning?</span>
     </>
   ),
-  intro = `At Heart & Care Cleaning, we take pride in delivering unparalleled service with
-  precision, professionalism, and a commitment to excellence. Whether it’s your home or
-  business, we ensure every window shines with diamond brilliance.`,
+  intro = `  At Heart & Care Cleaning, we take pride in delivering service that blends precision,
+  professionalism, and genuine care. Whether it’s your home or your business, our team of professionals shows up with dependable quality, clear communication, and a promise to
+  leave every space healthier, brighter, and better than we found it.`,
   bullets = [
     "Exceptional Quality",
     "Professional Team",

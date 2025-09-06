@@ -5,7 +5,7 @@ import "../css/footer.css"; // reuses .cta-band styles you already have
 
 export default function CtaGetQuote({
   ctaTitle = "Ready for a cleaner, fresher space?",
-  ctaSubtitle = "Heart & Care Cleaning Services is here to deliver spotless results you can count on. Get your free, no-obligation quote today and let us bring the sparkle back.",
+  ctaSubtitle = "Contact Heart and Care Cleaning Services for your free, no-obligation quote.",
   ctaButtonText = "GET A QUOTE TODAY",
 }) {
   return (
