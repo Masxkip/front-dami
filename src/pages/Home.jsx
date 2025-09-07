@@ -68,7 +68,7 @@ const Home = () => {
           <p className="lead">
              Let us handle the cleaning so you can focus on what matters most.
 
-             We Serve Across <strong>London, Woodstock,</strong> And <strong>Oxford County area.</strong>
+             We Serve Across <strong>Woodstock, Tillsonburg, </strong> And <strong>The Oxford County area.</strong>
           </p>
          
           <div className="cta-row">
@@ -90,12 +90,28 @@ const Home = () => {
           <h2 className="h2">We Are A Cleaning Service That puts People First</h2>
     
           <p className="muted-dark">
-            We’re a <strong>licensed, family-owned</strong> cleaning company providing professional, reliable care for residential, post-construction, and office spaces. Our mission is to deliver every job to the highest standards so you come home to a <strong>clean, healthy space</strong> you can be proud of. We serve <strong>Woodstock, Ingersoll, </strong> and <strong>Oxford County area</strong> and other surrounding areas. From studio apartments to busy offices and new builds, we tailor each clean to your space, schedule, and preferences. Our approach prioritizes healthier, safer environments for both homeowners and cleaners. Before you invite us in, it’s important to understand our values: integrity, professionalism, and clear communication. You can count on us to listen, show up on time, and provide the best house cleaning service for your needs, every visit.
-          </p>
-    
-          <p className="muted-dark">
-            We ensure your <strong>privacy and safety</strong>. We respect your home and your information. Our team follows safety-first practices and thoughtful cleaning protocols to ensure your space is cared for with precision, covering dusting and vacuuming, scrubbing floors, and sanitizing high-touch surfaces. Every home is different, so we offer <strong>custom plans</strong> and helpful add-ons like bed linen changes, dishwasher loading/unloading, and laundry folding. Prefer eco-conscious options? We can accommodate upon request. Count on dependable quality, <strong>flexible scheduling</strong>, and <strong>upfront pricing.</strong> If you’re ready for a partner that treats your home like their own, we are one quote away.
-          </p>
+        We’re a <strong>licensed, family-owned</strong> cleaning company providing professional, reliable care
+        for residential, post-construction, and office spaces. Our mission is to complete every job to the
+        highest standards so you return to a <strong>clean, healthy space</strong> you can be proud of. We serve
+        <strong> Woodstock, Tillsonburg,</strong> the <strong>Oxford County area</strong>, and surrounding communities.
+        From studio apartments to busy offices and new builds, we tailor each clean to your space, schedule,
+        and preferences. Our approach prioritizes healthier, safer environments for both homeowners and
+        cleaners. Before you invite us in, it’s important to know our values: integrity, professionalism,
+        and clear communication. You can count on us to listen, arrive on time, and deliver quality service
+        that fits your needs—every visit.
+      </p>
+
+      <p className="muted-dark">
+        We place the highest priority on your <strong>privacy and safety</strong>. Our team respects your home
+        and your information, following safety-first practices and thoughtful cleaning protocols that cover
+        dusting, vacuuming, scrubbing floors, and sanitizing high-touch surfaces. Because every home is
+        unique, we offer <strong>custom plans</strong> and helpful add-ons like bed linen changes, dishwasher
+        loading or unloading, and laundry folding. Prefer eco-conscious options? We can accommodate those
+        upon request. With dependable quality, <strong>flexible scheduling</strong>, and <strong>upfront pricing</strong>,
+        you can feel confident knowing your home is in caring hands. If you’re ready for a partner who
+        treats your home like their own, we’re only one quote away.
+      </p>
+
     
           {/* NEW: 4-feature list */}
     <ul className="about-features" role="list">
@@ -111,8 +127,8 @@ const Home = () => {
         <div className="feat-icon" aria-hidden>
           <ShieldCheck size={22} strokeWidth={2.25} />
         </div>
-        <div className="feat-title">Licensed &amp; Insured</div>
-        <div className="feat-sub">Background-checked and fully insured professionals.</div>
+        <div className="feat-title">Licensed &amp; Trusted</div>
+        <div className="feat-sub">A licensed, family-owned business built on reliability and care.</div>
       </li>
     
       <li className="about-feature">
@@ -150,8 +166,8 @@ const Home = () => {
 
       <FAQSection
         items={[
-          { q: "What areas do you service?", a: "London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo." },
-          { q: "Are you insured?", a: "Yes—fully licensed and insured for residential, office, and post-construction." },
+          { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
+          { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
           { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
         ]}
         ctaHref="/faqs"

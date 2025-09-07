@@ -84,6 +84,7 @@ export default function Quote() {
         rounded
         align="left"
       />
+      
       <div className="page-hero-band" aria-hidden="true" />
 
       <section className="container pop-into-band">
@@ -189,7 +190,7 @@ export default function Quote() {
             <div className="spacer" />
             <h4 className="h4">Service Hours</h4>
             <p className="muted">MON–FRI: <span>8:00 AM – 6:00 PM</span></p>
-            <p className="muted">SAT–SUN: <span>8:00 AM – 6:00 PM</span></p>
+            <p className="muted">SAT–SUN: <span>CLOSED</span></p>
 
             <h4 className="h4">Response time</h4>
             <p className="muted">We usually reply within a few business hours.</p>
@@ -198,15 +199,16 @@ export default function Quote() {
       </section>
 
       <FAQSection
-        items={[
-          { q: "What areas do you service?", a: "London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo." },
-          { q: "Are you insured?", a: "Yes—fully licensed and insured for residential, office, and post-construction." },
-          { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
-        ]}
-        ctaHref="/faqs"
-        ctaLabel="VIEW ALL FAQS"
-        hugNext
-      />
+              items={[
+                { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
+                { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
+                { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
+              ]}
+              ctaHref="/faqs"
+              ctaLabel="VIEW ALL FAQS"
+              hugNext
+            />
+            
 
       <div className="footer-wrap">
         <SiteFooter />

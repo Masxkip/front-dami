@@ -56,16 +56,16 @@ export default function Navbar() {
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/services">Services</NavLink>
-            <NavLink to="/faq">FAQ</NavLink>
-            <NavLink to="/contact">Contact Us</NavLink>
+            <NavLink to="/faq">FAQs</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </nav>
 
           {/* Actions (right) */}
           <div className="bd-actions">
-            <a href="tel:+14389265251" className="bd-call" aria-label="Call us" title="Call us">
+            <a href="tel:+14389265351" className="bd-call" aria-label="Call us" title="Call us">
               <Phone size={18} strokeWidth={2.5} />
             </a>
-            <Link to="/quote" className="bd-cta">Get A Quote</Link>
+            <Link to="/quote" className="bd-cta">Get Quote</Link>
             <button
               className="bd-burger"
               aria-label="Toggle navigation"
@@ -84,9 +84,9 @@ export default function Navbar() {
           <NavLink to="/" end>Home</NavLink>
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/services">Services</NavLink>
-          <NavLink to="/faq">FAQ</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
-          <NavLink to="/quote">Get A Quote</NavLink>
+          <NavLink to="/faq">FAQs</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/quote">Get Quote</NavLink>
         </nav>
       </div>
     </>

@@ -17,9 +17,9 @@ export default function ServiceIntro({
        We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with 
           professional cleaning for both homes and businesses. From routine upkeep to detailed deep cleans, 
           move-in/move-out services, and office sanitization, our licensed professional team delivers 
-          dependable quality, clear communication, and flexible scheduling. Eco-friendly options are always 
+          dependable quality, clear communication, and flexible scheduling. We also provide Eco-friendly options are always 
           available on request.
-          <br /> <strong>Our Service Hours:</strong> <strong>MON-FRI:</strong> 9:00AM - 5:00PM <strong>|</strong> <strong>SAT-SUN:</strong> 9:00AM - 5:00PM
+          <br /> <strong>Our Service Hours:</strong> <strong>MON-FRI:</strong> 9:00AM - 5:00PM <strong>|</strong> <strong>SAT-SUN:</strong> <strong>Closed</strong>
     </>
   ),
   tiersTitle = (
@@ -52,9 +52,10 @@ export default function ServiceIntro({
             <div className="service-copy">
               <h3 className="h3">Detailed Deep Cleaning</h3>
               <p className="muted">
-                When your space needs a true reset, our deep clean goes beyond the basics. We target
-                hard-to-reach and often-missed areas—inside appliances and cabinets, baseboards, vents,
-                trim, and more—to restore a like-new feel for seasonal refreshes or special occasions.
+                When your space needs a true reset, our deep cleaning service goes beyond the basics.
+                We take care of the areas that are often overlooked, such as inside appliances and cabinets,
+                baseboards, vents, and trim. This level of detail restores a like-new freshness that’s
+                perfect for seasonal resets or preparing for special occasions.
               </p>
              <ul className="service-bullets" role="list">
                 <li>Inside ovens, fridges & cabinets</li>
@@ -96,8 +97,9 @@ export default function ServiceIntro({
             <div className="service-copy">
               <h3 className="h3">Move In / Move Out Cleaning</h3>
               <p className="muted">
-                Start fresh or hand over the keys with confidence. We clean empty homes top-to-bottom—
-                interiors, appliances, and fixtures—so moving day is simpler and final walkthroughs are a breeze.
+                Start fresh or hand over the keys with confidence. Our move-in and move-out service
+                provides a top-to-bottom clean, covering interiors, appliances, and fixtures. We make
+                moving day simpler and ensure final walkthroughs are stress-free.
               </p>
               <ul className="service-bullets" role="list">
                 <li>Inside cabinets, closets & appliances</li>
@@ -115,7 +117,7 @@ export default function ServiceIntro({
       <CTADuo
         primaryHref="/services"
         primaryLabel="Learn more about our Cleaning Services"
-        secondaryHref="tel:+14389265251"
+        secondaryHref="tel:+14389265351"
         secondaryLabel="Call us at 1-438-925-5351"
       />
 

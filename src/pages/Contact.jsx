@@ -99,7 +99,7 @@ export default function Contact() {
                 <span className="icon"><Phone size={22} /></span>
                 <div>
                   <div className="info-label">Call Us</div>
-                  <a href="tel:+14389265251" className="info-value">
+                  <a href="tel:+14389265351" className="info-value">
                     (438) 925-5351
                   </a>
                 </div>
@@ -130,9 +130,8 @@ export default function Contact() {
                 <div className="hours">
                   <div className="info-label">Service Hours</div>
                   <ul>
-                    <li><span>Mon–Fri</span><span>8:00 AM – 6:00 PM</span></li>
-                    <li><span>Sat</span><span>9:00 AM – 3:00 PM</span></li>
-                    <li><span>Sun</span><span>Closed</span></li>
+                    <li><span>Mon-Fri</span><span>8:00 AM – 6:00 PM</span></li>                    
+                    <li><span>Sat-Sun</span><span>Closed</span></li>
                   </ul>
                 </div>
               </li>
@@ -210,15 +209,16 @@ export default function Contact() {
       </section>
 
       <FAQSection
-        items={[
-          { q: "What areas do you service?", a: "London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo." },
-          { q: "Are you insured?", a: "Yes—fully licensed and insured for residential, office, and post-construction." },
-          { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
-        ]}
-        ctaHref="/faqs"
-        ctaLabel="VIEW ALL FAQS"
-        hugNext
-      />
+              items={[
+                { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
+                { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
+                { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
+              ]}
+              ctaHref="/faqs"
+              ctaLabel="VIEW ALL FAQS"
+              hugNext
+            />
+            
 
       <div className="footer-wrap">
         <SiteFooter />

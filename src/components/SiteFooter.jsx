@@ -10,7 +10,7 @@ export default function SiteFooter({
   serviceAreasText = "Heart and Care Cleaning Services is proud to keep homes sparkling across Woodstock, Tillsonburg, and all of Oxford County.",
   phoneLabel = "Call Us",
   phone = "(438) 925-5351",
-  phoneHref = "tel:+14389265251",
+  phoneHref = "tel:+14389265351",
   emailLabel = "Email Us",
   email = "info@heartandcarecleaningservices.ca",
   emailHref = "mailto:info@heartandcarecleaningservices.ca",

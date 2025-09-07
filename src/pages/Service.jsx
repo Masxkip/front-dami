@@ -31,10 +31,10 @@ export default function Service() {
         <div className="container">
           <h2 className="h2">Custom Cleaning Services Tailored For You</h2>
           <p className="muted">
-          We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with 
+         We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with 
           professional cleaning for both homes and businesses. From routine upkeep to detailed deep cleans, 
           move-in/move-out services, and office sanitization, our licensed professional team delivers 
-          dependable quality, clear communication, and flexible scheduling. Eco-friendly options are always 
+          dependable quality, clear communication, and flexible scheduling. We also provide Eco-friendly options are always 
           available on request.
         </p>
         </div>
@@ -52,10 +52,12 @@ export default function Service() {
             <div className="service-copy">
               <h3 className="h3">Standard House Cleaning</h3>
               <p className="muted">
-                Keep your home consistently fresh and comfortable. Our standard clean covers the
-                essentials—dusting, floors, kitchen, and bathrooms—so daily living feels easier and
-                healthier. Perfect for busy households that want dependable upkeep without the hassle.
+                Keep your home consistently fresh and comfortable with our standard cleaning service. We focus on
+                the core areas that matter most, including dusting, floor care, kitchens, and bathrooms. Designed
+                for busy households, this service provides dependable upkeep and a healthier living environment,
+                all without the hassle.
               </p>
+
               <ul className="service-bullets" role="list">
                 <li>General dusting & surface wipe-downs</li>
                 <li>Kitchen & bathroom refresh</li>
@@ -75,10 +77,12 @@ export default function Service() {
             <div className="service-copy">
               <h3 className="h3">Detailed Deep Cleaning</h3>
               <p className="muted">
-                When your space needs a true reset, our deep clean goes beyond the basics. We target
-                hard-to-reach and often-missed areas—inside appliances and cabinets, baseboards, vents,
-                trim, and more—to restore a like-new feel for seasonal refreshes or special occasions.
+                When your space needs a true reset, our deep cleaning service goes beyond the basics.
+                We take care of the areas that are often overlooked, such as inside appliances and cabinets,
+                baseboards, vents, and trim. This level of detail restores a like-new freshness that’s
+                perfect for seasonal resets or preparing for special occasions.
               </p>
+
               <ul className="service-bullets" role="list">
                 <li>Inside ovens, fridges & cabinets</li>
                 <li>Baseboards, vents, trim & fixtures</li>
@@ -144,9 +148,11 @@ export default function Service() {
             <div className="service-copy">
               <h3 className="h3">Move In / Move Out Cleaning</h3>
               <p className="muted">
-                Start fresh or hand over the keys with confidence. We clean empty homes top-to-bottom—
-                interiors, appliances, and fixtures—so moving day is simpler and final walkthroughs are a breeze.
+                Start fresh or hand over the keys with confidence. Our move-in and move-out service
+                provides a top-to-bottom clean, covering interiors, appliances, and fixtures. We make
+                moving day simpler and ensure final walkthroughs are stress-free.
               </p>
+
               <ul className="service-bullets" role="list">
                 <li>Inside cabinets, closets & appliances</li>
                 <li>Baseboards, fixtures & doors detailed</li>
@@ -195,16 +201,16 @@ export default function Service() {
         </div>
       </section>
 
-      <FAQSection
-        items={[
-          { q: "What areas do you service?", a: "London, Woodstock, Tillsonburg, Ingersoll, Kitchener, Brantford, and Waterloo." },
-          { q: "Are you insured?", a: "Yes—fully licensed and insured for residential, office, and post-construction." },
-          { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
-        ]}
-        ctaHref="/faqs"
-        ctaLabel="VIEW ALL FAQS"
-        hugNext
-      />
+     <FAQSection
+             items={[
+               { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
+               { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
+               { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
+             ]}
+             ctaHref="/faqs"
+             ctaLabel="VIEW ALL FAQS"
+             hugNext
+           />
 
       <div className="footer-wrap">
         <CtaGetQuote />

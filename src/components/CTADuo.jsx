@@ -10,7 +10,7 @@ import "../css/cta-duo.css";
 export default function CTADuo({
   // Button texts + links
   primaryLabel = "Learn more about our Cleaning Services",
-  secondaryHref = "tel:+14389265251",
+  secondaryHref = "tel:+14389265351",
   secondaryLabel = "Call us at 1-438-925-5351",
 
   // Theming knobs (match your About page defaults)
