@@ -5,13 +5,14 @@ import { Sparkles, ShieldCheck, Calendar, Users } from "lucide-react";
 import FAQSection from "../components/FAQSection";
 import SiteFooter from "../components/SiteFooter";
 import ServiceIntro from "../components/ServiceIntro";
-import truckImg from "../assets/jjk1.png";
 import WhyChoose from "../components/WhyChoose";
 import CtaGetQuote from "../components/CtaGetQuote";
 
 // Cloudinary bits
 import { cld } from "../lib/cloudinary";
 import { IMG } from "../assets/cloudinaryImages";
+
+const whyImg = cld(IMG.why, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
     cld(IMG.homeHero1, "f_auto,q_auto,w_1920,c_fill,g_center"),
     cld(IMG.homeHero2, "f_auto,q_auto,w_1920,c_fill,g_center"),
     cld(IMG.homeHero3, "f_auto,q_auto,w_1920,c_fill,g_center"),
+    
   ]), []);
 
   // Preload images (optional—but prevents initial flash)
@@ -158,7 +160,7 @@ const Home = () => {
 
 
       <section className="why-choose section bleed">
-        <WhyChoose imgSrc={truckImg} imgAlt="Blue Diamond truck" />
+        <WhyChoose imgSrc={whyImg} imgAlt="Blue Diamond truck" />
       </section>
 
       {/* Keep visuals in sync if you want */}

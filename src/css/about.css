@@ -2,6 +2,9 @@
    ABOUT PAGE — FULL CSS (consolidated)
    =========================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+
 .about-page{
   /* Core tokens */
   --hero-radius: 44px;
@@ -415,5 +418,137 @@
     padding-top: 2px;     /* was ~8–14px */
   }
 }
+
+
+
+
+
+
+
+
+/* Use a display font variable */
+.about-page { --display: "Fraunces", ui-serif, Georgia, serif; }
+
+/* Keep image color, just *lightly* blur it */
+.about-page .story-photo{ position:relative; border-radius:18px; overflow:hidden; isolation:isolate; }
+.about-page .story-photo::after{
+  content:"";
+  position:absolute; inset:0;
+  /* No dark overlay; just a subtle blur + tiny saturation lift */
+  background: transparent;
+  backdrop-filter: blur(3px) saturate(1.05);
+  -webkit-backdrop-filter: blur(3px) saturate(1.05);
+  z-index:1;
+}
+
+/* Center the badge */
+.about-page .story-badge{
+  position:absolute;
+  left:50%; top:50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
+  color:#fff;
+  text-align:center;
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+}
+
+/* Remove chip/button look; make it bold & elegant */
+.about-page .story-badge-text{
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(1.25rem, 2.2vw + .6rem, 2.25rem);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  /* just a soft glow for readability on busy backgrounds */
+  text-shadow: 0 3px 18px rgba(0,0,0,.45), 0 1px 0 rgba(0,0,0,.25);
+  padding: 0; border: none; background: transparent;
+}
+
+/* Curly flourish centered under the text */
+.about-page .story-flourish{
+  width: clamp(160px, 24vw, 240px);
+  height: auto;
+  color: #ffffff;
+  opacity: .95;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.35));
+}
+
+/* Optional: slightly darker blur only on very bright images */
+@media (prefers-color-scheme: light){
+  .about-page .story-photo::after{ backdrop-filter: blur(3px) saturate(1.05) brightness(.98); }
+}
+
+/* Small screens: nudge up a bit so it stays visible */
+@media (max-width: 640px){
+  .about-page .story-badge{ top:48%; }
+}
+
+
+
+
+
+
+
+
+
+/* Reuse the display font */
+.about-page { --display: "Fraunces", ui-serif, Georgia, serif; }
+
+/* Wrapper that sits INSIDE .mission-media, above the image but below the label */
+.about-page .mission-photo{
+  position: relative;
+  border-radius: 18px;     /* match .mission-img radius */
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Keep image color; only soften with blur/saturation */
+.about-page .mission-photo::after{
+  content:"";
+  position:absolute; inset:0;
+  background: transparent;                 /* no dark tint */
+  backdrop-filter: blur(3px) saturate(1.05);
+  -webkit-backdrop-filter: blur(3px) saturate(1.05);
+  z-index: 1;                               /* above img, below label */
+}
+
+/* Centered label (title + flourish) */
+.about-page .mission-badge{
+  position:absolute;
+  left:50%; top:50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding-inline: 10px;  /* tiny padding so long lines don’t touch edges on mobile */
+}
+
+/* Bold, elegant (no chip/button) */
+.about-page .mission-badge-text{
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(1.1rem, 1.6vw + .7rem, 2rem);
+  letter-spacing: .03em;
+  text-transform: none;                     /* not ALL CAPS here; feels premium */
+  text-shadow: 0 3px 18px rgba(0,0,0,.45), 0 1px 0 rgba(0,0,0,.25);
+}
+
+/* Curly line */
+.about-page .mission-flourish{
+  width: clamp(150px, 22vw, 230px);
+  height: auto;
+  color: #ffffff;
+  opacity: .95;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.35));
+}
+
+/* Small screens: center stays visible slightly higher */
+@media (max-width: 640px){
+  .about-page .mission-badge{ top:48%; }
+}
+
+
+
 
 

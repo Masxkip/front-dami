@@ -106,3 +106,77 @@ body { padding-top: var(--header-h); }
   .bd-cta{ display:inline-flex; }
   .bd-burger{ display:none; }
 }
+
+
+
+
+/* --------- hamburger with hover micro-interaction --------- */
+.bd-burger{
+  --size: 46px;
+  width: var(--size); height: var(--size);
+  display:inline-flex; align-items:center; justify-content:center;
+  border:none;
+  border-radius: 12px;
+  background: rgba(255,255,255,.12);                 /* ← show box by default */
+  box-shadow: 0 4px 12px rgba(0,0,0,.18) inset;       /* ← and the inset glow */
+  color:inherit;
+  transition: background-color .18s ease, box-shadow .18s ease, transform .18s ease;
+  outline: none;
+}
+
+/* Hover: keep the same box, only add the subtle lift + icon bend */
+.bd-burger:hover{
+  transform: translateY(-1px);                        /* keep the little lift */
+  /* no background or shadow change here */
+}
+
+.bd-burger:active{ transform: translateY(0); }
+
+/* Icon micro-anim */
+.bd-burger svg{ transition: transform .22s ease; }
+.bd-burger:hover svg{ transform: rotate(12deg) scale(1.05); }
+.bd-burger[data-open="true"]:hover svg{ transform: rotate(-12deg) scale(1.05); }
+
+.bd-burger:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+
+
+
+/* hamburger base (desktop & up = transparent) */
+.bd-burger{
+  --size: 46px;
+  width: var(--size); height: var(--size);
+  display:inline-flex; align-items:center; justify-content:center;
+  border:none; background:transparent; color:inherit; border-radius:12px;
+  transition: background-color .18s ease, box-shadow .18s ease, transform .18s ease;
+  outline:none;
+}
+.bd-burger svg{ transition: transform .22s ease; }
+
+/* desktop hides burger entirely */
+@media (min-width: 992px){
+  .bd-burger{ display:none; }
+}
+
+
+
+
+/* MOBILE ONLY: show the box permanently, and keep hover for icon bend/lift */
+@media (max-width: 991.98px){
+  .bd-burger{
+    background: rgba(255,255,255,.12);
+    box-shadow: inset 0 4px 12px rgba(0,0,0,.18);
+  }
+  .bd-burger:hover{
+    transform: translateY(-1px);           /* little lift only on hover */
+  }
+  .bd-burger:active{ transform: translateY(0); }
+
+  /* icon micro-bend */
+  .bd-burger:hover svg{ transform: rotate(12deg) scale(1.05); }
+  .bd-burger[data-open="true"]:hover svg{ transform: rotate(-12deg) scale(1.05); }
+}

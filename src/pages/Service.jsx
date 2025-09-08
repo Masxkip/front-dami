@@ -1,15 +1,21 @@
+// Service.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import SectionHero from "../components/SectionHero";
 import "../css/service.css";
-import heroBg from "../assets/i1.jpg";
-import heroBg1 from "../assets/m2.png";
-import heroBg2 from "../assets/m3.png";
-import heroBg3 from "../assets/m4.png";
-import heroBg4 from "../assets/m1.png";
 import FAQSection from "../components/FAQSection";
 import CtaGetQuote from "../components/CtaGetQuote";
 import SiteFooter from "../components/SiteFooter";
+
+import { cld } from "../lib/cloudinary";
+import { IMG } from "../assets/cloudinaryImages";
+
+// Cloudinary URLs (tuned per use)
+const serviceHero = cld(IMG.hero, "f_auto,q_auto,c_fill,g_auto,w_1920,h_520,dpr_auto"); // background-style hero
+const svc1 = cld(IMG.service1, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
+const svc2 = cld(IMG.service2, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
+const svc3 = cld(IMG.service3, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
+const svc4 = cld(IMG.service4, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
 
 export default function Service() {
   return (
@@ -17,7 +23,7 @@ export default function Service() {
       <SectionHero
         title="Our Cleaning Services"
         subtitle="Reliable home & office cleaning tailored to you."
-        bgImage={heroBg}
+        bgImage={serviceHero}
         height="44vh"
         rounded
         align="left"
@@ -31,12 +37,12 @@ export default function Service() {
         <div className="container">
           <h2 className="h2">Custom Cleaning Services Tailored For You</h2>
           <p className="muted">
-         We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with 
-          professional cleaning for both homes and businesses. From routine upkeep to detailed deep cleans, 
-          move-in/move-out services, and office sanitization, our licensed professional team delivers 
-          dependable quality, clear communication, and flexible scheduling. We also provide Eco-friendly options are always 
-          available on request.
-        </p>
+            We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with
+            professional cleaning for both homes and businesses. From routine upkeep to detailed deep cleans,
+            move-in/move-out services, and office sanitization, our licensed team delivers
+            dependable quality, clear communication, and flexible scheduling. We also provide
+            eco-friendly options upon request.
+          </p>
         </div>
       </section>
 
@@ -44,10 +50,10 @@ export default function Service() {
       <section className="service-alt section">
         <div className="container service-alt-list">
 
-          {/* 1 — Standard House Cleaning (image LEFT, black frame) */}
+          {/* 1 — Standard House Cleaning */}
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={heroBg1} alt="Standard house cleaning" className="service-img" />
+              <img src={svc1} alt="Standard house cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Standard House Cleaning</h3>
@@ -69,10 +75,10 @@ export default function Service() {
             </div>
           </article>
 
-          {/* 2 — Detailed Deep Cleaning (image RIGHT, purple frame) */}
+          {/* 2 — Detailed Deep Cleaning (reverse) */}
           <article className="service-item is-reverse">
             <div className="service-media frame-purple">
-              <img src={heroBg2} alt="Detailed deep cleaning" className="service-img" />
+              <img src={svc2} alt="Detailed deep cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Detailed Deep Cleaning</h3>
@@ -94,10 +100,10 @@ export default function Service() {
             </div>
           </article>
 
-          {/* 3 — Weekly / Monthly Home Cleaning (image LEFT, black frame) */}
+          {/* 3 — Weekly / Monthly Home Cleaning */}
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={heroBg1} alt="Weekly and monthly home cleaning plans" className="service-img" />
+              <img src={svc1} alt="Weekly and monthly home cleaning plans" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Weekly / Monthly Home Cleaning</h3>
@@ -117,10 +123,10 @@ export default function Service() {
             </div>
           </article>
 
-          {/* 4 — Office / Commercial Sanitization (image RIGHT, purple frame) */}
+          {/* 4 — Office / Commercial Sanitization (reverse) */}
           <article className="service-item is-reverse">
             <div className="service-media frame-purple">
-              <img src={heroBg3} alt="Office and commercial sanitization" className="service-img" />
+              <img src={svc3} alt="Office and commercial sanitization" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Office / Commercial Sanitization</h3>
@@ -133,17 +139,17 @@ export default function Service() {
                 <li>After-hours & custom schedules</li>
                 <li>Desks, doors & shared-area sanitizing</li>
                 <li>Restrooms, kitchens & reception care</li>
-                <li>Reliable, insured, professional staff</li>
+                <li>Reliable, professional staff</li> {/* removed “insured” */}
               </ul>
               <br />
               <Link to="/quote" className="btn-primary">Get a quote →</Link>
             </div>
           </article>
 
-          {/* 5 — Move-In / Move-Out (image LEFT, black frame) */}
+          {/* 5 — Move-In / Move-Out */}
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={heroBg4} alt="Move-in and move-out cleaning" className="service-img" />
+              <img src={svc4} alt="Move-in and move-out cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Move In / Move Out Cleaning</h3>
@@ -201,16 +207,16 @@ export default function Service() {
         </div>
       </section>
 
-     <FAQSection
-             items={[
-               { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
-               { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
-               { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
-             ]}
-             ctaHref="/faqs"
-             ctaLabel="VIEW ALL FAQS"
-             hugNext
-           />
+      <FAQSection
+        items={[
+          { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and the Oxford County area." },
+          { q: "Are your cleaners background-checked?", a: "Yes. Our team members are carefully vetted and trained before joining Heart & Care." },
+          { q: "Do you use eco-friendly products?", a: "We also provide eco-friendly options upon request." }
+        ]}
+        ctaHref="/faqs"
+        ctaLabel="VIEW ALL FAQS"
+        hugNext
+      />
 
       <div className="footer-wrap">
         <CtaGetQuote />

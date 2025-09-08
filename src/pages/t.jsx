@@ -163,3 +163,104 @@ export default function Navbar() {
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 2 */}
+<article className="mission-item is-reverse">
+  <div className="mission-copy">…</div>
+  <div className="mission-media">
+    <div className="mission-photo">
+      <img src={mission2Url} alt="Family-owned, community-focused team" className="mission-img" />
+      <div className="mission-badge" aria-hidden="true">
+        <span className="mission-badge-text">Building Trust, Serving Community</span>
+        <svg className="mission-flourish" viewBox="0 0 280 30">
+          <path d="M5 15c30-20 60 20 90 0s60-20 90 0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+          <path d="M30 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7"/>
+          <path d="M180 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div className="mission-copy">
+                <h3 className="h3">Building Trust, Serving Community</h3>
+                <p className="muted">
+                  Heart &amp; Care began by helping friends and neighbours, and we have grown by word of mouth
+                  ever since. Trust is at the center of how we work. We show up reliably, safeguard personal
+                  information, and take pride in leaving every space better than we found it. As a small,
+                  community-oriented company, we invest in our people and keep our promises because that is
+                  what good neighbours do.
+                </p>
+                <ul className="service-bullets" role="list">
+                  <li>Licensed and accountability-first</li>
+                  <li>Clear, friendly communication before and after each visit</li>
+                  <li>People-first culture that supports our team and clients</li>
+                </ul>
+              </div>
+</article>
+
+
+
+ {/* 2 */}
+            <article className="mission-item is-reverse">
+              <div className="mission-copy">
+                <h3 className="h3">Building Trust, Serving Community</h3>
+                <p className="muted">
+                  Heart &amp; Care began by helping friends and neighbours, and we have grown by word of mouth
+                  ever since. Trust is at the center of how we work. We show up reliably, safeguard personal
+                  information, and take pride in leaving every space better than we found it. As a small,
+                  community-oriented company, we invest in our people and keep our promises because that is
+                  what good neighbours do.
+                </p>
+                <ul className="service-bullets" role="list">
+                  <li>Licensed and accountability-first</li>
+                  <li>Clear, friendly communication before and after each visit</li>
+                  <li>People-first culture that supports our team and clients</li>
+                </ul>
+              </div>
+              <div className="mission-media">
+                <img src={mission2Url} alt="Family-owned, community-focused team" className="mission-img" />
+              </div>
+            </article>
+
+
+{/* 3 */}
+<article className="mission-item">
+  <div className="mission-media">
+    <div className="mission-photo">
+      <img src={mission3Url} alt="Simple, flexible service" className="mission-img" />
+      <div className="mission-badge" aria-hidden="true">
+        <span className="mission-badge-text">Smarter Tools, Flexible Service</span>
+        <svg className="mission-flourish" viewBox="0 0 260 30">
+          <path d="M5 15c30-20 60 20 90 0s60-20 90 0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+          <path d="M30 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7"/>
+          <path d="M180 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+   <div className="mission-copy">
+                <h3 className="h3">Smarter Tools, Flexible Service</h3>
+                <p className="muted">
+                  Cleaning should bring comfort, clarity, and peace of mind. We use proven methods,
+                  modern tools, and ongoing training to ensure every clean is both thorough and safe.
+                  From weekly upkeep to detailed deep cleans and move-ready services, we tailor plans
+                  to your home or business with scheduling that fits your life. Simple, transparent,
+                  flexible, dependable.
+                </p>
+                <ul className="service-bullets" role="list">
+                  <li>Refined checklists and quality control on every job</li>
+                  <li>Plans tailored to homes, offices, and move-in/move-out needs</li>
+                  <li>Easy scheduling, reminders, and upfront pricing</li>
+                </ul>
+              </div>
+</article>

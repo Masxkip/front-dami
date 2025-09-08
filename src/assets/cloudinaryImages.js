@@ -1,7 +1,16 @@
 export const IMG = {
   hero: "i1",
-  homeHero1: "i1", // existing
-  homeHero2: "i2",        // add this in Cloudinary
-  homeHero3: "i3",        // add this in Cloudinary
-  navbar: "logo",
+  homeHero1: "i11",
+  homeHero2: "i2",        
+  homeHero3: "i3",        
+  navbar: "lg1",
+  service1: "s1d",        
+  service2: "sof",        
+  service3: "smv",        
+  service4: "swe",  
+  story: "i2",        
+  mission1: "i1",     
+  mission2: "i1",     
+  mission3: "i1",      
+  why: "jjk1",
 };

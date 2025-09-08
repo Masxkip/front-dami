@@ -69,6 +69,8 @@ export default function Navbar() {
             <button
               className="bd-burger"
               aria-label="Toggle navigation"
+              aria-pressed={open}
+              data-open={open}
               aria-expanded={open}
               onClick={() => setOpen(v => !v)}
             >

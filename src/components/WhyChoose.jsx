@@ -29,7 +29,8 @@ export default function WhyChoose({
         <div className="why-card">
           {/* image */}
           <div className="why-media">
-            <img src={imgSrc} alt={imgAlt} className="why-img" />
+            <img src={imgSrc} alt={imgAlt} className="why-img" loading="lazy" decoding="async" />
+
           </div>
 
           {/* copy */}
