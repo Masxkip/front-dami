@@ -3,9 +3,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/service.css";
 import CTADuo from "../components/CTADuo";
-import heroBg1 from "../assets/m2.png";
-import heroBg2 from "../assets/m3.png";
-import heroBg3 from "../assets/m4.png";
+import { cld } from "../lib/cloudinary";
+import { IMG } from "../assets/cloudinaryImages";
+
+
+const svc2 = cld(IMG.service2, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
+const svc4 = cld(IMG.service4, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
+const svc5 = cld(IMG.service5, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
+
 
 export default function ServiceIntro({
 
@@ -46,7 +51,7 @@ export default function ServiceIntro({
         <div className="container service-alt-list">
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={heroBg1} alt="Residential cleaning" className="service-img" />
+              <img src={svc2} alt="Detailed deep cleaning" className="service-img" loading="lazy" decoding="async" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Detailed Deep Cleaning</h3>
@@ -69,7 +74,7 @@ export default function ServiceIntro({
 
           <article className="service-item is-reverse">
             <div className="service-media frame-purple">
-              <img src={heroBg2} alt="Post-construction cleaning" className="service-img" />
+              <img src={svc4} alt="Office and commercial sanitization" className="service-img" loading="lazy" decoding="async" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Office / Commercial Sanitization</h3>
@@ -91,7 +96,7 @@ export default function ServiceIntro({
 
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={heroBg3} alt="Office and commercial cleaning" className="service-img" />
+              <img src={svc5} alt="Move-in and move-out cleaning" className="service-img" loading="lazy" decoding="async" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Move In / Move Out Cleaning</h3>

@@ -16,6 +16,7 @@ const svc1 = cld(IMG.service1, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_aut
 const svc2 = cld(IMG.service2, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
 const svc3 = cld(IMG.service3, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
 const svc4 = cld(IMG.service4, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
+const svc5 = cld(IMG.service5, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto");
 
 export default function Service() {
   return (
@@ -103,7 +104,7 @@ export default function Service() {
           {/* 3 — Weekly / Monthly Home Cleaning */}
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={svc1} alt="Weekly and monthly home cleaning plans" className="service-img" />
+              <img src={svc3} alt="Weekly and monthly home cleaning plans" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Weekly / Monthly Home Cleaning</h3>
@@ -126,7 +127,7 @@ export default function Service() {
           {/* 4 — Office / Commercial Sanitization (reverse) */}
           <article className="service-item is-reverse">
             <div className="service-media frame-purple">
-              <img src={svc3} alt="Office and commercial sanitization" className="service-img" />
+              <img src={svc4} alt="Office and commercial sanitization" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Office / Commercial Sanitization</h3>
@@ -149,7 +150,7 @@ export default function Service() {
           {/* 5 — Move-In / Move-Out */}
           <article className="service-item">
             <div className="service-media frame-black">
-              <img src={svc4} alt="Move-in and move-out cleaning" className="service-img" />
+              <img src={svc5} alt="Move-in and move-out cleaning" className="service-img" />
             </div>
             <div className="service-copy">
               <h3 className="h3">Move In / Move Out Cleaning</h3>
@@ -210,7 +211,7 @@ export default function Service() {
       <FAQSection
         items={[
           { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and the Oxford County area." },
-          { q: "Are your cleaners background-checked?", a: "Yes. Our team members are carefully vetted and trained before joining Heart & Care." },
+          { q: "What happens after I book a cleaning?", a: "Once you book, we’ll send a confirmation with your scheduled date, time, and service details. Our team will arrive prepared with all supplies, follow your checklist, and keep you updated if anything changes." },
           { q: "Do you use eco-friendly products?", a: "We also provide eco-friendly options upon request." }
         ]}
         ctaHref="/faqs"

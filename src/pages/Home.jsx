@@ -169,7 +169,7 @@ const Home = () => {
       <FAQSection
         items={[
           { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
-          { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
+          { q: "What happens after I book a cleaning?", a: "Once you book, we’ll send a confirmation with your scheduled date, time, and service details. Our team will arrive prepared with all supplies, follow your checklist, and keep you updated if anything changes." },
           { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
         ]}
         ctaHref="/faqs"

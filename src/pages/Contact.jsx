@@ -9,6 +9,9 @@ import SiteFooter from "../components/SiteFooter";
 // import { cld } from "../lib/cloudinary";
 import { IMG } from "../assets/cloudinaryImages";
 
+import FormAlert from "../components/FormAlert";
+
+
 
 
 
@@ -77,7 +80,7 @@ export default function Contact() {
     <main className="contact-page">
   <SectionHero
   title="Contact Us"
-  subtitle="Call, email, or send a quick message—our team will get back to you promptly."
+  subtitle="Call, email, or send a quick message, our team will get back to you promptly."
   bgPublicId={IMG.hero}
   height="44vh"
   rounded
@@ -195,14 +198,24 @@ export default function Contact() {
                 />
               </div>
 
-              {error && <p className="error" role="alert">{error}</p>}
-              {done && <p className="success">Thanks! Your message was sent.</p>}
-
               <div className="actions">
                 <button className="btn-primary" disabled={loading}>
                   {loading ? "Sending..." : "Send message"}
                 </button>
               </div>
+       {error && (  
+  <FormAlert kind="error" onClose={() => setError("")} autoHideMs={8000}>
+    Message Failed! Try Again.
+  </FormAlert>
+  )}
+
+
+    {done && (
+  <FormAlert kind="success" onClose={() => setDone(false)} autoHideMs={6000}>
+    Message sent! We’ll be in touch shortly.
+  </FormAlert>
+  )}
+
             </form>
           </aside>
         </div>
@@ -211,7 +224,7 @@ export default function Contact() {
       <FAQSection
               items={[
                 { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
-                { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
+{ q: "What happens after I book a cleaning?", a: "Once you book, we’ll send a confirmation with your scheduled date, time, and service details. Our team will arrive prepared with all supplies, follow your checklist, and keep you updated if anything changes." },
                 { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
               ]}
               ctaHref="/faqs"

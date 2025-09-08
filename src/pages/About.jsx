@@ -129,11 +129,11 @@ export default function About() {
               </div>
             </article>
 
-           {/* 3 */}
+          
 <article className="mission-item is-reverse">
   <div className="mission-media">
     <div className="mission-photo">
-      <img src={mission3Url} alt="Simple, flexible service" className="mission-img" />
+      <img src={mission2Url} alt="Simple, flexible service" className="mission-img" />
       <div className="mission-badge" aria-hidden="true">
         <span className="mission-badge-text">Building Trust, Serving Community</span>
         <svg className="mission-flourish" viewBox="0 0 260 30">
@@ -266,7 +266,7 @@ export default function About() {
       <FAQSection
         items={[
           { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and the Oxford County area." },
-          { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
+          { q: "What happens after I book a cleaning?", a: "Once you book, we’ll send a confirmation with your scheduled date, time, and service details. Our team will arrive prepared with all supplies, follow your checklist, and keep you updated if anything changes." },
           { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." }
         ]}
         ctaHref="/faqs"

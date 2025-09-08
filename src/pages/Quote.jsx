@@ -4,6 +4,7 @@ import "../css/quote.css";
 import heroBg from "../assets/i1.jpg";
 import FAQSection from "../components/FAQSection";
 import SiteFooter from "../components/SiteFooter";
+import FormAlert from "../components/FormAlert";
 
 const API_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -78,7 +79,7 @@ export default function Quote() {
     <main className="quote-page">
       <SectionHero
         title="Get a Fast, Fair Quote"
-        subtitle="Tell us a bit about your space and the service you need. We’ll reply quickly with clear pricing—no surprises."
+        subtitle="Tell us a bit about your space and the service you need. We’ll reply quickly with clear pricing no surprises."
         bgImage={heroBg}
         height="44vh"
         rounded
@@ -158,14 +159,24 @@ export default function Quote() {
                 <textarea id="message" name="message" value={form.message} onChange={onChange} placeholder="Any priorities, access info, pets, parking, etc." />
               </div>
 
-              {error && <p className="error">{error}</p>}
-              {done && <p className="success">Thanks! Your request was sent. We’ll be in touch shortly.</p>}
-
               <div className="actions">
                 <button className="btn-primary" disabled={loading}>
                   {loading ? "Sending..." : "Get my quote"}
                 </button>
+
+                  
                 <span className="help">Prefer to talk? Call us: <strong>(438) 925-5351</strong></span>
+                  {error && (  
+                  <FormAlert kind="error" onClose={() => setError("")} autoHideMs={8000}>
+                    Message Failed! Try Again.
+                  </FormAlert>
+                  )}
+                
+                {done && (
+            <FormAlert kind="success" onClose={() => setDone(false)} autoHideMs={6000}>
+              Request sent — we’ll reply shortly.
+            </FormAlert>
+          )}
               </div>
             </form>
           </div>
@@ -201,7 +212,7 @@ export default function Quote() {
       <FAQSection
               items={[
                 { q: "What areas do you service?", a: "Woodstock, Tillsonburg, and Oxford County area." },
-                { q: "Are your cleaners background-checked?", a: "Yes! Our team members are carefully vetted and trained before joining Heart & Care." },
+{ q: "What happens after I book a cleaning?", a: "Once you book, we’ll send a confirmation with your scheduled date, time, and service details. Our team will arrive prepared with all supplies, follow your checklist, and keep you updated if anything changes." },
                 { q: "Do you use eco-friendly products?", a: "We can accommodate eco-conscious options upon request." },
               ]}
               ctaHref="/faqs"

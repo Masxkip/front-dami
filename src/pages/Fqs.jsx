@@ -304,8 +304,8 @@ export default function Fqs() {
   <CTADuo
   primaryHref="/services"
   primaryLabel="Learn more about our Cleaning Services"
-  secondaryHref="tel:+18884776243"
-  secondaryLabel="Call us at 1-888-477-MAID"
+  secondaryHref="tel:+14389265351"
+        secondaryLabel="Call us at 1-438-925-5351"
 />
 
       <div className="footer-wrap">
