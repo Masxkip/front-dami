@@ -6,7 +6,6 @@ import CTADuo from "../components/CTADuo";
 import heroBg1 from "../assets/m2.png";
 import heroBg2 from "../assets/m3.png";
 import heroBg3 from "../assets/m4.png";
-import heroBg4 from "../assets/m1.png";
 
 export default function ServiceIntro({
 
