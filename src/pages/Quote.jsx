@@ -195,7 +195,7 @@ export default function Quote() {
             <div className="badges">
               <span className="badge">Deep Clean</span>
               <span className="badge">Move In/Out</span>
-              <span className="badge">Office</span>
+              <span className="badge">Office Sanitization</span>
             </div>
 
             <div className="spacer" />
