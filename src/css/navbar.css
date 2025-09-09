@@ -180,3 +180,90 @@ body { padding-top: var(--header-h); }
   .bd-burger:hover svg{ transform: rotate(12deg) scale(1.05); }
   .bd-burger[data-open="true"]:hover svg{ transform: rotate(-12deg) scale(1.05); }
 }
+
+
+
+
+
+
+/* Desktop nav: animated underline + color on hover/active */
+.bd-nav a{
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 800;                 /* keep your bold look */
+  font-size: 1.17rem;
+  opacity: 1;                        /* was .95 */
+  transition: color .18s ease;
+}
+
+/* center-out underline */
+.bd-nav a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-10px;                      /* sits just under text */
+  width:0;
+  height:3px;
+  background:#8b61ec;                /* your purple */
+  border-radius:999px;
+  transition: width .24s ease, left .24s ease;
+}
+
+/* hover + active/current page */
+.bd-nav a:hover,
+.bd-nav a[aria-current="page"]{
+  color:#8b61ec;
+}
+.bd-nav a:hover::after,
+.bd-nav a[aria-current="page"]::after{
+  left:0;
+  width:100%;
+}
+
+/* remove old underline behavior if present */
+.bd-nav a:hover{ text-decoration:none; }
+.bd-nav a[aria-current="page"]{ text-decoration:none; }
+
+
+
+/* mobile drawer grid spacing (more room between links) */
+.bd-mobile-nav{
+  /* was gap: 16px; */
+  gap: 22px;
+}
+
+/* mobile links: padding + rounded + subtle hover background */
+.bd-mobile-nav a{
+  display:block;
+  padding: 12px 10px;
+  border-radius: 12px;
+  font-weight:800;
+  position: relative;
+  transition: background-color .18s ease, color .18s ease, transform .12s ease;
+}
+
+
+/* hover: soft purple wash + tiny lift + accent bar in */
+.bd-mobile-nav a:hover{
+  background: color-mix(in oklab, #8b61ec 14%, white);
+  color:#8b61ec;
+  transform: translateY(-1px);
+}
+.bd-mobile-nav a:hover::before{
+  transform: translateY(-50%) scaleX(1);
+}
+
+/* current/active route in drawer */
+.bd-mobile-nav a[aria-current="page"]{
+  background: color-mix(in oklab, #8b61ec 20%, white);
+  color:#8b61ec;
+}
+.bd-mobile-nav a[aria-current="page"]::before{
+  transform: translateY(-50%) scaleX(1);
+}
+
+
+@media (max-width: 991.98px){
+  .bd-nav a::after{ display:none; }  /* desktop underline not needed in drawer */
+}
