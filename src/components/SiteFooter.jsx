@@ -17,7 +17,7 @@ export default function SiteFooter({
   locationLabel = "Location",
   addressLines = ["Woodstock, ON"],
   copyright = "Copyright © heartandcarecleaningservices 2025 | All Rights Reserved.",
-  privacyHref = "/privacy-policy",
+  privacyHref = "/privacy",
 }) {
   return (
     <footer className="site-footer" role="contentinfo" aria-label="Footer">
@@ -58,7 +58,7 @@ export default function SiteFooter({
 
       <div className="container footer-bottom">
         <div className="copy">{copyright}</div>
-        <a className="privacy" href={privacyHref}>Privacy Policy</a>
+         <Link className="privacy" to="/privacy">Privacy Policy</Link>
       </div>
     </footer>
   );

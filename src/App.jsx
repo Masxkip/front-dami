@@ -9,6 +9,8 @@ import Service from "./pages/Service";
 import Fqs from "./pages/Fqs";
 import ScrollToTop from "./components/ScrollToTop";
 import SiteLayout from "./layouts/SiteLayout";
+import Privacy from "./pages/Privacy";
+
 
 
 function App() {
@@ -19,10 +21,11 @@ function App() {
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-           <Route path="/services" element={<Service />} />
+          <Route path="/services" element={<Service />} />
           <Route path="/faq" element={<Fqs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/quote" element={<Quote />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Route>
       </Routes>
     </Router>

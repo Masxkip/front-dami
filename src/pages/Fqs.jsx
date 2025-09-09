@@ -1,10 +1,10 @@
 import React, { useMemo, useState, useEffect, useId } from "react";
 import SectionHero from "../components/SectionHero";
 import "../css/fqs.css";
-import heroBg from "../assets/i1.jpg";
 import CTADuo from "../components/CTADuo";
 import CtaGetQuote from "../components/CtaGetQuote";
 import SiteFooter from "../components/SiteFooter";
+import { IMG } from "../assets/cloudinaryImages";
 
 const FAQ_DATA = [
   {
@@ -223,7 +223,7 @@ export default function Fqs() {
       <SectionHero
         title="Frequently Asked Questions"
         subtitle="Quick answers to common questions about pricing, scheduling, and what’s included."
-        bgImage={heroBg}
+        bgPublicId={IMG.hero}
         height="44vh"
         rounded
         align="left"

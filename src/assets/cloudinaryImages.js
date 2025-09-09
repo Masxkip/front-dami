@@ -1,8 +1,8 @@
 export const IMG = {
   hero: "i1",
-  homeHero1: "i6",
+  homeHero1: "i3",
   homeHero2: "i4",        
-  homeHero3: "i3",        
+  homeHero3: "i6",        
   navbar: "lg1",
   service1: "st1",        
   service2: "sd1",         

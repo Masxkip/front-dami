@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import SectionHero from "../components/SectionHero";
 import "../css/quote.css";
-import heroBg from "../assets/i1.jpg";
 import FAQSection from "../components/FAQSection";
 import SiteFooter from "../components/SiteFooter";
 import FormAlert from "../components/FormAlert";
+import { IMG } from "../assets/cloudinaryImages";
 
 const API_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -80,7 +80,7 @@ export default function Quote() {
       <SectionHero
         title="Get a Fast, Fair Quote"
         subtitle="Tell us a bit about your space and the service you need. We’ll reply quickly with clear pricing, no surprises."
-        bgImage={heroBg}
+        bgPublicId={IMG.hero}
         height="44vh"
         rounded
         align="left"

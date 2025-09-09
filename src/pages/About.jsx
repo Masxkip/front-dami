@@ -24,7 +24,7 @@ export default function About() {
       <SectionHero
         title="Heart & Care Cleaning Services"
         subtitle="Licensed, family-owned, and community-focused cleaning service you can count on."
-        bgImage={aboutHero}
+        bgPublicId={IMG.hero}
         height="44vh"
         rounded
         align="left"

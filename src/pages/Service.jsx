@@ -24,7 +24,7 @@ export default function Service() {
       <SectionHero
         title="Our Cleaning Services"
         subtitle="Reliable home & office cleaning tailored to you."
-        bgImage={serviceHero}
+        bgPublicId={IMG.hero}
         height="44vh"
         rounded
         align="left"
