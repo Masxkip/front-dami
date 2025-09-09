@@ -224,7 +224,7 @@ textarea { min-height: 140px; resize: vertical; }
 
 /* Mobile tweaks: slightly reduce side padding and make sure there's no drift */
 @media (max-width: 640px) {
-  .contact-page .container { padding-inline: 12px; }  /* a hair tighter on phones */
+  .contact-page .container { padding-inline: 10px; }  /* a hair tighter on phones */
   .contact-page .contact-grid { max-width: 600px; }   /* keep centered, narrower */
   .contact-page .card { margin-inline: 0; width: 100%; }
 }
