@@ -419,6 +419,26 @@
   }
 }
 
+/* Mobile: show the story image BEFORE the title & copy */
+@media (max-width: 900px){
+  .about-page .story-grid{
+    grid-template-columns: 1fr;   /* already there, but safe */
+  }
+
+  /* put image first */
+  .about-page .story-media{
+    order: 1;              /* appears before the copy block */
+    margin-top: 0;         /* remove the desktop alignment tweak */
+    margin-bottom: 12px;   /* breathing room before the title */
+  }
+
+  /* put the text after the image */
+  .about-page .story-copy{
+    order: 2;
+  }
+}
+
+
 
 
 
@@ -507,7 +527,7 @@
   content:"";
   position:absolute; inset:0;
   background: transparent;                 /* no dark tint */
-  backdrop-filter: blur(3px) saturate(1.05);
+  backdrop-filter: blur(1.9px) saturate(1.09);
   -webkit-backdrop-filter: blur(3px) saturate(1.05);
   z-index: 1;                               /* above img, below label */
 }

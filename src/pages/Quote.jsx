@@ -79,7 +79,7 @@ export default function Quote() {
     <main className="quote-page">
       <SectionHero
         title="Get a Fast, Fair Quote"
-        subtitle="Tell us a bit about your space and the service you need. We’ll reply quickly with clear pricing no surprises."
+        subtitle="Tell us a bit about your space and the service you need. We’ll reply quickly with clear pricing, no surprises."
         bgImage={heroBg}
         height="44vh"
         rounded
@@ -92,7 +92,7 @@ export default function Quote() {
         <div className="quote-grid">
           <div className="card">
             <h2 className="h2">Request a quote</h2>
-            <p className="muted">Fill this out and we’ll get back to you promptly (usually same day).</p>
+            <p className="muted">Fill this out and we’ll get back to you promptly.</p>
 
             <form className="quote-form" onSubmit={submit}>
               <div className="form-row">
@@ -186,8 +186,8 @@ export default function Quote() {
             <ul className="list">
               <li>Clear, itemized pricing</li>
               <li>No hidden fees or long contracts</li>
-              <li>Flexible scheduling (evenings & weekends)</li>
-              <li>Licensed, insured, and vetted cleaners</li>
+              <li>Flexible scheduling</li>
+              <li>Licensed and vetted cleaners</li>
             </ul>
 
             <div className="spacer" />

@@ -264,5 +264,18 @@ textarea { min-height: 120px; resize: vertical; }
 
 
 
+/* Space between the card section and the FAQs */
+.contact-page .pop-into-band,
+.quote-page  .pop-into-band{
+  /* small gap on phones, larger on desktop */
+  margin-bottom: clamp(12px, 2vw, 22px);
+}
+
+@media (min-width: 1024px){
+  .contact-page .pop-into-band,
+  .quote-page  .pop-into-band{
+    margin-bottom: clamp(80px, 6.5vw, 110px);
+  }
+}
 
 

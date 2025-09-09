@@ -164,36 +164,43 @@ export default function About() {
             
 
            {/* 3 */}
+{/* 3 */}
 <article className="mission-item">
   <div className="mission-media">
     <div className="mission-photo">
-      <img src={mission3Url} alt="Simple, flexible service" className="mission-img" />
+      <img
+        src={mission3Url}
+        alt="Safety-focused cleaning with trained professionals"
+        className="mission-img"
+        loading="lazy"
+        decoding="async"
+      />
       <div className="mission-badge" aria-hidden="true">
-        <span className="mission-badge-text">Smarter Tools, Flexible Service</span>
+        <span className="mission-badge-text">Safety in Every Step</span>
         <svg className="mission-flourish" viewBox="0 0 260 30">
-          <path d="M5 15c30-20 60 20 90 0s60-20 90 0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-          <path d="M30 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7"/>
-          <path d="M180 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7"/>
+          <path d="M5 15c30-20 60 20 90 0s60-20 90 0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+          <path d="M30 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7" />
+          <path d="M180 22c10-8 20 8 30 0" fill="none" stroke="currentColor" strokeWidth="2" opacity=".7" />
         </svg>
       </div>
     </div>
   </div>
-   <div className="mission-copy">
-                <h3 className="h3">Smarter Tools, Flexible Service</h3>
-                <p className="muted">
-                  Cleaning should bring comfort, clarity, and peace of mind. We use proven methods,
-                  modern tools, and ongoing training to ensure every clean is both thorough and safe.
-                  From weekly upkeep to detailed deep cleans and move-ready services, we tailor plans
-                  to your home or business with scheduling that fits your life. Simple, transparent,
-                  flexible, dependable.
-                </p>
-                <ul className="service-bullets" role="list">
-                  <li>Refined checklists and quality control on every job</li>
-                  <li>Plans tailored to homes, offices, and move-in/move-out needs</li>
-                  <li>Easy scheduling, reminders, and upfront pricing</li>
-                </ul>
-              </div>
-         </article>
+
+  <div className="mission-copy">
+    <h3 className="h3">Safety in Every Step</h3>
+    <p className="muted">
+      We clean with care and intention at every stage. Our team follows clear checklists, safe product handling,
+      and thoughtful workflows that protect your family, your pets, and your surfaces. From ventilation and dilution
+      to careful tool selection and tidy close-out, we prioritize health, hygiene, and consistent results.
+    </p>
+    <ul className="service-bullets" role="list">
+      <li>PPE, safe dilution, and labeled bottles</li>
+      <li>Color-coded cloths to prevent cross-contamination</li>
+      <li>High-touch sanitizing and careful ventilation</li>
+    </ul>
+  </div>
+</article>
+
           </div>
         </div>
       </section>

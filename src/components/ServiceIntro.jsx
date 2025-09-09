@@ -21,8 +21,8 @@ export default function ServiceIntro({
        We proudly serve <strong>Woodstock, Tillsonburg, and the Oxford County area</strong> with 
           professional cleaning for both homes and businesses. From routine upkeep to detailed deep cleans, 
           move-in/move-out services, and office sanitization, our licensed professional team delivers 
-          dependable quality, clear communication, and flexible scheduling. We also provide Eco-friendly options are always 
-          available on request.
+          dependable quality, clear communication, and flexible scheduling. We also provide eco-friendly options upon request.
+
           <br /> <strong>Our Service Hours:</strong> <strong>MON-FRI:</strong> 9:00AM - 5:00PM <strong>|</strong> <strong>SAT-SUN:</strong> <strong>Closed</strong>
     </>
   ),
@@ -87,7 +87,8 @@ export default function ServiceIntro({
                 <li>After-hours & custom schedules</li>
                 <li>Desks, doors & shared-area sanitizing</li>
                 <li>Restrooms, kitchens & reception care</li>
-                <li>Reliable, insured, professional staff</li>
+                <li>Reliable, professional staff</li>
+
               </ul>
               <br />
               <Link to="/quote" className="btn-primary">Get a quote →</Link>

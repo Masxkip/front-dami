@@ -11,8 +11,8 @@ export const IMG = {
   service5: "smv",  
   story: "i2",        
   mission1: "o1",     
-  mission2: "i1",     
-  mission3: "o2",      
+  mission2: "r1",     
+  mission3: "r2",      
   why: "wh",
 };
  
