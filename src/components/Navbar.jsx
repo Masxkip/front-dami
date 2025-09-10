@@ -57,7 +57,7 @@ export default function Navbar() {
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/services">Services</NavLink>
             <NavLink to="/faq">FAQs</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact">Contact Us</NavLink>
           </nav>
 
           {/* Actions (right) */}
@@ -87,7 +87,7 @@ export default function Navbar() {
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/services">Services</NavLink>
           <NavLink to="/faq">FAQs</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact">Contact Us</NavLink>
           <NavLink to="/quote">Get Quote</NavLink>
         </nav>
       </div>

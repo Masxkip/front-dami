@@ -113,7 +113,7 @@ export default function ServiceIntro({
                 <li>Landlord, tenant & realtor-ready finish</li>
               </ul>
               <br />
-              <a className="btn-primary" href={quoteHref}>Get a quote →</a>
+              <Link to="/quote" className="btn-primary">Get a quote →</Link>
             </div>
           </article>
         </div>
