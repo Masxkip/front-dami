@@ -23,7 +23,7 @@ export default function ServiceIntro({
           move-in/move-out services, and office sanitization, our licensed professional team delivers 
           dependable quality, clear communication, and flexible scheduling. We also provide eco-friendly options upon request.
 
-          <br /> <strong>Our Service Hours:</strong> <strong>MON-FRI:</strong> 9:00AM - 5:00PM <strong>|</strong> <strong>SAT-SUN:</strong> <strong>Closed</strong>
+          <br /> <strong>Our Service Hours:</strong> <strong>MON-FRI:</strong> 8:00AM - 6:00PM <strong>|</strong> <strong>SAT-SUN:</strong> <strong>Closed</strong>
     </>
   ),
   tiersTitle = (
