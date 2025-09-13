@@ -165,7 +165,7 @@ export default function Quote() {
                 </button>
 
                   
-                <span className="help">Prefer to talk? Call us: <strong>(438) 925-5351</strong></span>
+                <span className="help">Prefer to talk? Call us: <strong>(438) 926-5351</strong></span>
                   {error && (  
                   <FormAlert kind="error" onClose={() => setError("")} autoHideMs={8000}>
                     Message Failed! Try Again.

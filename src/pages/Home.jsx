@@ -16,7 +16,7 @@ const whyImg = cld(IMG.why, "f_auto,q_auto,c_fill,g_auto,w_1200,h_800,dpr_auto")
 
 
 
-const SLIDE_MS = 40000; // 40 seconds
+const SLIDE_MS = 10000; // 40 seconds
 
 const Home = () => {
   // Build the slide URLs once
