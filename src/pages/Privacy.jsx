@@ -114,7 +114,7 @@ export default function Privacy() {
     <h3 className="h3">Contact us</h3>
     <p className="muted">
       Questions about this policy? Email <a href="mailto:info@heartandcarecleaningservices.ca">info@heartandcarecleaningservices.ca</a> or call
-      <a href="tel:+14389265351"> (438) 925-5351</a>. 
+      <a href="tel:+14389265351"> (438) 926-5351</a>. 
     </p>
   </div>
 </section>

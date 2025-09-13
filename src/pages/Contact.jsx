@@ -103,7 +103,7 @@ export default function Contact() {
                 <div>
                   <div className="info-label">Call Us</div>
                   <a href="tel:+14389265351" className="info-value">
-                    (438) 925-5351
+                    (438) 926-5351
                   </a>
                 </div>
               </li>

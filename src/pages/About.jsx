@@ -267,7 +267,7 @@ export default function About() {
         primaryHref="/services"
         primaryLabel="Learn more about our Cleaning Services"
         secondaryHref="tel:+14389265351"
-        secondaryLabel="Call us at 1-438-925-5351"
+        secondaryLabel="Call us at 1-438-926-5351"
       />
 
       <FAQSection

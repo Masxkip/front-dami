@@ -7,9 +7,9 @@ import "../css/footer.css";
 
 export default function SiteFooter({
   // NEW: footer-only props
-  serviceAreasText = "Heart and Care Cleaning Services is proud to keep homes sparkling across Woodstock, Tillsonburg, and all of Oxford County.",
+  serviceAreasText = "H&C Cleaning Services is proud to keep homes sparkling across Woodstock, Tillsonburg, and all of Oxford County.",
   phoneLabel = "Call Us",
-  phone = "(438) 925-5351",
+  phone = "(438) 926-5351",
   phoneHref = "tel:+14389265351",
   emailLabel = "Email Us",
   email = "info@heartandcarecleaningservices.ca",
@@ -55,7 +55,6 @@ export default function SiteFooter({
         </div>
       </div>
       <br />
-
       <div className="container footer-bottom">
         <div className="copy">{copyright}</div>
          <Link className="privacy" to="/privacy">Privacy Policy</Link>
