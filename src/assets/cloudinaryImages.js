@@ -3,7 +3,7 @@ export const IMG = {
   homeHero1: "i3",
   homeHero2: "i4",        
   homeHero3: "i6",        
-  navbar: "lg1",
+  navbar: "hc",
   service1: "st1",        
   service2: "sd1",         
   service3: "swe",        
